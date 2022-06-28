@@ -1,8 +1,9 @@
+import { NextPage } from "next";
 import React from "react";
 import TwoColTable from "../../../components/tables/TwoColTable";
 import UnOrderdList from "../../../components/UnOrderdList";
 
-const Conditional = () => {
+const Conditional: NextPage = () => {
   const booleanExpressionsData = [
     "Boolean expressions ask a question and precedence a Yes or No result which we use to control program flow",
     "Boolean expressions using comparison operators evaluate to True / False or Yes / No",
