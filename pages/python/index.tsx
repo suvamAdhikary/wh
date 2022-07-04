@@ -15,7 +15,7 @@ const Python: NextPage = () => {
 
   return (
     <>
-      <Layout>
+      <Layout title="PYTHON ???">
         <>
           <QA
             question="Reserverved Words"

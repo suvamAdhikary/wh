@@ -1,18 +1,31 @@
+import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export interface layoutProps {
+  title: string;
   children?: any;
 }
 
-const Layout = ({ children }: layoutProps) => {
+const Layout = ({ children, title }: layoutProps) => {
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <div>
         <header className="flex flex-row justify-between px-8 items-center">
           <Link href={"/"}>
-            <figure className="cursor-pointer">
-              <img src="/whLogo.png" />
+            <figure className="cursor-pointer h-20 w-40">
+              <Image
+                layout="responsive"
+                width={80}
+                height={45}
+                src="/whLogo.png"
+                alt="logo"
+                priority
+              />
             </figure>
           </Link>
           <nav className="flex flex-row gap-2">

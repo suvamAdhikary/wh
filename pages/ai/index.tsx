@@ -35,7 +35,7 @@ const AI: NextPage = () => {
 
   return (
     <>
-      <Layout>
+      <Layout title={"AI ???"}>
         <>
           <OneLiner>
             IBM Research defines Artificial Intelligence (AI) as Augmented

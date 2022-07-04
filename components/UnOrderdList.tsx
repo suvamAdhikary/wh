@@ -17,8 +17,8 @@ const UnOrderdList = ({
         {heading && <h4>{heading} :-</h4>}
         <p>{description}</p>
         <ul>
-          {listData?.map((el) => (
-            <li className="list-disc" key={el}>
+          {listData?.map((el, i) => (
+            <li className="list-disc" key={`${el}-${i}`}>
               {el}
             </li>
           ))}

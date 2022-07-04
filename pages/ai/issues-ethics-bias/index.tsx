@@ -58,7 +58,7 @@ const IssuesEthicsBias: NextPage = () => {
       <main className="flex flex-col gap-4 px-8 py-4">
         <OneLiner>The number one key challenge of AI is privacy.</OneLiner>
         <OneLiner>
-          Whoever owns the rights to use the algorithm owns it's applications.
+          Whoever owns the rights to use the algorithm owns it&apos;s applications.
         </OneLiner>
         <OneLiner>
           Ethics is not a technological problem, ethics is a human problem.
