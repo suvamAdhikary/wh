@@ -5,6 +5,7 @@ export interface twoColTableProps {
   description?: string;
   cols: string[];
   tableData: any[];
+  id?: string;
 }
 
 const TwoColTable = ({
@@ -12,10 +13,14 @@ const TwoColTable = ({
   description,
   cols,
   tableData,
+  id,
 }: twoColTableProps) => {
   return (
     <>
-      <div className="flex flex-col gap-2 py-2 px-2 pl-6 border border-solid border-sky-400">
+      <div
+        id={id}
+        className="flex flex-col gap-2 py-2 px-2 pl-6 border border-solid border-sky-400"
+      >
         <h4>{heading} :-</h4>
         <p>{description}</p>
         <table className="border-2 border-solid border-gray-400 border-collapse">

@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import OneLiner from "../../../components/OneLiner";
 import QA from "../../../components/QA";
 import UnOrderdList from "../../../components/UnOrderdList";
 
@@ -36,6 +37,10 @@ const Functions: NextPage = () => {
   return (
     <>
       <main className="flex flex-col gap-4 px-8 py-4">
+        <OneLiner>
+          A function is some stored code that we use. A function takes some
+          input and produces an output.
+        </OneLiner>
         <UnOrderdList
           heading="Building our Own Functions"
           listData={buildingOurOwnFunctionsData}
