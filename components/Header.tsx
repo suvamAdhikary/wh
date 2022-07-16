@@ -25,6 +25,11 @@ const Header = ({ accessTagsList }: headerProps) => {
           {accessTagsList?.length && <AccessTags list={accessTagsList} />}
         </div>
         <nav className="flex flex-row gap-2">
+          <Link href={"/cloud"}>
+            <span className="cursor-pointer bg-blue-900 rounded-3xl text-teal-400 px-2">
+              CLOUD
+            </span>
+          </Link>
           <Link href={"/ai"}>
             <span className="cursor-pointer bg-blue-900 rounded-3xl text-teal-400 px-2">
               AI
