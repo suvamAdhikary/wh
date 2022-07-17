@@ -110,13 +110,15 @@ const Files: NextPage = () => {
             We can conveniently skip a line by using the continue statement
           </OneLiner>
           <OneLiner>
-            if not line.startswith('searching string') : continue
+            if not line.startswith(&apos;searching string&apos;) : continue
           </OneLiner>
           <OneLiner>
             We can look for a string anywhere in a line as our selection
             criteria
           </OneLiner>
-          <OneLiner>if not 'searching string' in line : continue</OneLiner>
+          <OneLiner>
+            if not &apos;searching string&apos; in line : continue
+          </OneLiner>
         </>
       </Layout>
     </>
