@@ -20,7 +20,11 @@ const UnOrderdList = ({
         className="flex flex-col gap-2 py-2 px-2 pl-6 border border-solid border-sky-400"
       >
         {heading && <h4>{heading} :-</h4>}
-        <p>{description}</p>
+        {description?.split("\n").map((line) => (
+          <p className="indent-4" key={line}>
+            {line}
+          </p>
+        ))}
         <ul>
           {listData?.map((el, i) => (
             <li className="list-disc" key={`${el}-${i}`}>

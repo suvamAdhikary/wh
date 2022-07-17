@@ -8,10 +8,10 @@ export interface oneLinerProps {
 const OneLiner = ({ id, children }: oneLinerProps) => {
   return (
     <>
-      <h4 id={id} className="py-2 px-2 border border-solid border-sky-400">
+      <div id={id} className="py-2 px-2 border border-solid border-sky-400">
         {" "}
         {children}{" "}
-      </h4>
+      </div>
     </>
   );
 };
