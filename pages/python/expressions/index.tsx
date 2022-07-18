@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import QA from "../../../components/QA";
 import UnOrderdList from "../../../components/UnOrderdList";
 
@@ -148,70 +149,72 @@ const Expressions: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <UnOrderdList heading="Constants" listData={constantsData} />
-        <UnOrderdList
-          heading="Reserved Words"
-          description={reservedWordsData.description}
-          listData={reservedWordsData.list}
-        />
-        <UnOrderdList heading="Variables" listData={variablesData} />
-        <UnOrderdList
-          heading="Python Variable Name Rules"
-          listData={pythonVariableNameRulesData}
-        />
-        <UnOrderdList
-          heading="Assignment Statements"
-          listData={assignmentStatementsData}
-        />
-        <UnOrderdList
-          heading="Numeric Expressions"
-          listData={numericExpressionsData}
-        />
-        <UnOrderdList
-          heading="Order of Evaluation"
-          listData={orderOfEvaluationData}
-        />
-        <UnOrderdList
-          heading="Operator Precedence Rules"
-          description={operatorPrecedenceRulesData.description}
-          listData={operatorPrecedenceRulesData.list}
-        />
-        <UnOrderdList
-          heading="Operator Precedence"
-          listData={operatorPrecedenceData}
-        />
-        <UnOrderdList
-          heading='What does "Type" Mean? '
-          listData={whatDoesTypeMeanData}
-        />
-        <UnOrderdList heading="Type Matters" listData={typeMattersData} />
-        <UnOrderdList
-          heading="Several Types of Numbers"
-          listData={severalTypesOfNumbersData}
-        />
-        <UnOrderdList
-          heading="Type Conversions"
-          listData={typeConversionsData}
-        />
-        <QA
-          question="Integer Division"
-          answer="Integer division produces a floating point result"
-        />
-        <UnOrderdList
-          heading="String Conversions"
-          listData={stringConversionsData}
-        />
-        <UnOrderdList heading="User Input" listData={userInputData} />
-        <UnOrderdList
-          heading="Comments in Python"
-          listData={commentsInPythonData}
-        />
-        <QA
-          question="Converting User Input"
-          answer="If we want to read a number from the user, we must convert it from a string to a number using a type conversion function"
-        />
-      </main>
+      <Layout title="Expressions - Python">
+        <>
+          <UnOrderdList heading="Constants" listData={constantsData} />
+          <UnOrderdList
+            heading="Reserved Words"
+            description={reservedWordsData.description}
+            listData={reservedWordsData.list}
+          />
+          <UnOrderdList heading="Variables" listData={variablesData} />
+          <UnOrderdList
+            heading="Python Variable Name Rules"
+            listData={pythonVariableNameRulesData}
+          />
+          <UnOrderdList
+            heading="Assignment Statements"
+            listData={assignmentStatementsData}
+          />
+          <UnOrderdList
+            heading="Numeric Expressions"
+            listData={numericExpressionsData}
+          />
+          <UnOrderdList
+            heading="Order of Evaluation"
+            listData={orderOfEvaluationData}
+          />
+          <UnOrderdList
+            heading="Operator Precedence Rules"
+            description={operatorPrecedenceRulesData.description}
+            listData={operatorPrecedenceRulesData.list}
+          />
+          <UnOrderdList
+            heading="Operator Precedence"
+            listData={operatorPrecedenceData}
+          />
+          <UnOrderdList
+            heading='What does "Type" Mean? '
+            listData={whatDoesTypeMeanData}
+          />
+          <UnOrderdList heading="Type Matters" listData={typeMattersData} />
+          <UnOrderdList
+            heading="Several Types of Numbers"
+            listData={severalTypesOfNumbersData}
+          />
+          <UnOrderdList
+            heading="Type Conversions"
+            listData={typeConversionsData}
+          />
+          <QA
+            question="Integer Division"
+            answer="Integer division produces a floating point result"
+          />
+          <UnOrderdList
+            heading="String Conversions"
+            listData={stringConversionsData}
+          />
+          <UnOrderdList heading="User Input" listData={userInputData} />
+          <UnOrderdList
+            heading="Comments in Python"
+            listData={commentsInPythonData}
+          />
+          <QA
+            question="Converting User Input"
+            answer="If we want to read a number from the user, we must convert it from a string to a number using a type conversion function"
+          />
+        </>
+      </Layout>
     </>
   );
 };

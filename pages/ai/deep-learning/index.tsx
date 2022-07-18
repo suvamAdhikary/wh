@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import UnOrderdList from "../../../components/UnOrderdList";
 
 const DeepLearning: NextPage = () => {
@@ -42,23 +43,25 @@ const DeepLearning: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <UnOrderdList
-          heading={deepLearningData.title}
-          description={deepLearningData.description}
-          listData={deepLearningData.list}
-        />
-        <UnOrderdList
-          heading={deepLearningMajorFix.title}
-          description={deepLearningMajorFix.description}
-          listData={deepLearningMajorFix.list}
-        />
-        <UnOrderdList
-          heading={deepLearningMajorUses.title}
-          description={deepLearningMajorUses.description}
-          listData={deepLearningMajorUses.list}
-        />
-      </main>
+      <Layout title="Deep Learning - AI">
+        <>
+          <UnOrderdList
+            heading={deepLearningData.title}
+            description={deepLearningData.description}
+            listData={deepLearningData.list}
+          />
+          <UnOrderdList
+            heading={deepLearningMajorFix.title}
+            description={deepLearningMajorFix.description}
+            listData={deepLearningMajorFix.list}
+          />
+          <UnOrderdList
+            heading={deepLearningMajorUses.title}
+            description={deepLearningMajorUses.description}
+            listData={deepLearningMajorUses.list}
+          />
+        </>
+      </Layout>
     </>
   );
 };

@@ -1,58 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* main css */
 
-*,
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+/* vendors */
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* base */
+@import "./base/reset.css";
+@import "./base/typography.css";
 
-* {
-  box-sizing: border-box !important;
-}
+/* layout */
+@import "./layout/header.css";
+@import "./layout/footer.css";
+@import "./layout/layout.css";
 
-@media (prefers-reduced-motion: no-preference) {
-  * {
-    scroll-behavior: smooth !important;
-  }
-}
+/* components */
+@import "./components/button.css";
+@import "./components/list.css";
+@import "./components/qa.css";
+@import "./components/table.css";
+@import "./components/dynamicComponents.css";
 
-header nav > ul {
-  padding-inline-start: 0;
-  margin-block: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+/* pages */
 
-header nav > ul::-webkit-scrollbar {
-  display: none;
-}
-
-header nav {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-header nav::-webkit-scrollbar {
-  display: none;
-}
-
-header nav li a {
-  display: inline-block;
-  white-space: nowrap;
-  padding: 5px 5px;
-  text-decoration: none;
-}
-
-main {
-  min-height: calc(100vh - 130px);
-}
+/* utils */
+@import "./utils/variables.css";
+@import "./utils/utilities.css";

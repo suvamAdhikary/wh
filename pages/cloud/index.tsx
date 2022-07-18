@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout/Layout";
 import BusinessCaseForCloudComputing from "../../components/pageLabel/cloud/BusinessCaseForCloudComputing";
 import EmergingTechnologiesAcceleratedByCloud from "../../components/pageLabel/cloud/EmergingTechnologiesAcceleratedByCloud";
 import IntroductionToCloudComputing from "../../components/pageLabel/cloud/IntroductionToCloudComputing";

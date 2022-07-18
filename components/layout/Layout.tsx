@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import GoToTop from "./buttons/GoToTop";
+import GoToTop from "../buttons/GoToTop";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -20,15 +20,15 @@ const Layout = ({ children, title, accessTagsList }: layoutProps) => {
         <title>{title}</title>
       </Head>
       <>
-        <div className="relative py-4 h-auto">
+        <div className="wrapper">
           <Header accessTagsList={accessTagsList} />
-          <div className="my-0 mx-auto pb-16 w-screen h-fit overflow-y-scroll absolute top-16">
-            {/* <aside></aside> */}
-            <main className="flex flex-col gap-4 px-8 py-4">{children}</main>
-            <GoToTop />
-            <Footer />
-          </div>
-          <div id="top" className="fixed top-16"></div>
+          <div id="top"></div>
+          {/* <div className="my-0 mx-auto pb-16 w-screen h-fit overflow-y-scroll absolute top-16"> */}
+          {/* <aside></aside> */}
+          <main>{children}</main>
+          <GoToTop />
+          <Footer />
+          {/* </div> */}
         </div>
       </>
     </>

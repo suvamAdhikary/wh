@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import QA from "../../../components/QA";
 import UnOrderdList from "../../../components/UnOrderdList";
 
@@ -84,45 +85,47 @@ const NeuralNetworks: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <UnOrderdList
-          heading={neuralNetworksData.title}
-          description={neuralNetworksData.description}
-          listData={neuralNetworksData.list}
-        />
-        <UnOrderdList
-          heading={neuralNetworksProcess.title}
-          description={neuralNetworksProcess.description}
-          listData={neuralNetworksProcess.list}
-        />
-        <UnOrderdList
-          heading={neuralNetorkLayerData.title}
-          description={neuralNetorkLayerData.description}
-          listData={neuralNetorkLayerData.list}
-        />
-        <QA
-          question={deepNeuralNetworkData.title}
-          answer={deepNeuralNetworkData.data}
-        />
-        <UnOrderdList
-          heading={perceptronsData.title}
-          description={perceptronsData.description}
-          listData={perceptronsData.list}
-        />
-        <UnOrderdList
-          heading={biasAndHiddenNodesData.title}
-          description={biasAndHiddenNodesData.description}
-          listData={biasAndHiddenNodesData.list}
-        />
-        <UnOrderdList
-          heading={convolutionalNeuralNetworksOrCNNsData.title}
-          listData={convolutionalNeuralNetworksOrCNNsData.list}
-        />
-        <UnOrderdList
-          heading={recurrentNeuralNetworksOrRNNsData.title}
-          listData={recurrentNeuralNetworksOrRNNsData.list}
-        />
-      </main>
+      <Layout title="Neural Networks - AI">
+        <>
+          <UnOrderdList
+            heading={neuralNetworksData.title}
+            description={neuralNetworksData.description}
+            listData={neuralNetworksData.list}
+          />
+          <UnOrderdList
+            heading={neuralNetworksProcess.title}
+            description={neuralNetworksProcess.description}
+            listData={neuralNetworksProcess.list}
+          />
+          <UnOrderdList
+            heading={neuralNetorkLayerData.title}
+            description={neuralNetorkLayerData.description}
+            listData={neuralNetorkLayerData.list}
+          />
+          <QA
+            question={deepNeuralNetworkData.title}
+            answer={deepNeuralNetworkData.data}
+          />
+          <UnOrderdList
+            heading={perceptronsData.title}
+            description={perceptronsData.description}
+            listData={perceptronsData.list}
+          />
+          <UnOrderdList
+            heading={biasAndHiddenNodesData.title}
+            description={biasAndHiddenNodesData.description}
+            listData={biasAndHiddenNodesData.list}
+          />
+          <UnOrderdList
+            heading={convolutionalNeuralNetworksOrCNNsData.title}
+            listData={convolutionalNeuralNetworksOrCNNsData.list}
+          />
+          <UnOrderdList
+            heading={recurrentNeuralNetworksOrRNNsData.title}
+            listData={recurrentNeuralNetworksOrRNNsData.list}
+          />
+        </>
+      </Layout>
     </>
   );
 };

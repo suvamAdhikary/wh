@@ -1,0 +1,7 @@
+.dynamic-children {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bg-dark);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}

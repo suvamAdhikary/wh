@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import UnOrderdList from "../../../components/UnOrderdList";
 
 const W2: NextPage = () => {
@@ -78,37 +79,39 @@ const W2: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <UnOrderdList
-          heading={cognitiveComputingData.title}
-          description={cognitiveComputingData.description}
-          listData={cognitiveComputingData.list}
-        />
-        <UnOrderdList
-          heading={artificialIntelligenceData.title}
-          description={artificialIntelligenceData.description}
-          listData={artificialIntelligenceData.list}
-        />
-        <UnOrderdList
-          heading={machineLearningData.title}
-          description={machineLearningData.description}
-          listData={machineLearningData.list}
-        />
-        <UnOrderdList
-          heading={deepLearningData.title}
-          description={deepLearningData.description}
-          listData={deepLearningData.list}
-        />
-        <UnOrderdList
-          heading={neuralNetworksData.title}
-          description={neuralNetworksData.description}
-          listData={neuralNetworksData.list}
-        />
-        <UnOrderdList
-          heading={artificialIntelligenceAndDataScienceData.title}
-          listData={artificialIntelligenceAndDataScienceData.list}
-        />
-      </main>
+      <Layout title="AI by IBM">
+        <>
+          <UnOrderdList
+            heading={cognitiveComputingData.title}
+            description={cognitiveComputingData.description}
+            listData={cognitiveComputingData.list}
+          />
+          <UnOrderdList
+            heading={artificialIntelligenceData.title}
+            description={artificialIntelligenceData.description}
+            listData={artificialIntelligenceData.list}
+          />
+          <UnOrderdList
+            heading={machineLearningData.title}
+            description={machineLearningData.description}
+            listData={machineLearningData.list}
+          />
+          <UnOrderdList
+            heading={deepLearningData.title}
+            description={deepLearningData.description}
+            listData={deepLearningData.list}
+          />
+          <UnOrderdList
+            heading={neuralNetworksData.title}
+            description={neuralNetworksData.description}
+            listData={neuralNetworksData.list}
+          />
+          <UnOrderdList
+            heading={artificialIntelligenceAndDataScienceData.title}
+            listData={artificialIntelligenceAndDataScienceData.list}
+          />
+        </>
+      </Layout>
     </>
   );
 };
