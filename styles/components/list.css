@@ -1,0 +1,19 @@
+.common-unorderd-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* padding: 0.5rem; */
+}
+
+.list-description {
+    text-indent: 1rem;
+}
+
+.common-unorderd-list {
+  padding-left: 1.5rem;
+}
+
+.common-unorderd-list__item {
+  list-style-type: disc;
+}
+

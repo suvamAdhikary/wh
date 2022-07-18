@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import UnOrderdList from "../../../components/UnOrderdList";
 
 const FutureCareer: NextPage = () => {
@@ -25,14 +26,16 @@ const FutureCareer: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <UnOrderdList
-          heading={futureWithAI.title}
-          description={futureWithAI.description}
-          listData={futureWithAI.list}
-        />
-        <UnOrderdList heading={AILadder.title} listData={AILadder.list} />
-      </main>
+      <Layout title="Future Career - AI">
+        <>
+          <UnOrderdList
+            heading={futureWithAI.title}
+            description={futureWithAI.description}
+            listData={futureWithAI.list}
+          />
+          <UnOrderdList heading={AILadder.title} listData={AILadder.list} />
+        </>
+      </Layout>
     </>
   );
 };

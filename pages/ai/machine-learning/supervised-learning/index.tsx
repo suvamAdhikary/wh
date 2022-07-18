@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../../components/layout/Layout";
 import OneLiner from "../../../../components/OneLiner";
 import QA from "../../../../components/QA";
 import UnOrderdList from "../../../../components/UnOrderdList";
@@ -79,54 +80,56 @@ const SupervisedLearning: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <UnOrderdList
-          heading={supervisedLearningData.title}
-          listData={supervisedLearningData.list}
-        />
-        <UnOrderdList
-          heading={supervisedLearningBreakdown.title}
-          listData={supervisedLearningBreakdown.list}
-        />
-        <QA question={regressionData.title} answer={regressionData.data} />
-        <QA
-          question={neuralNetworksData.title}
-          answer={neuralNetworksData.data}
-        />
-        <QA
-          question={classificationData.title}
-          answer={classificationData.data}
-        />
-        <UnOrderdList
-          heading={classificationForms.title}
-          description={classificationForms.description}
-          listData={classificationForms.list}
-        />
-        <QA question={featuresData.title} answer={featuresData.data} />
-        <OneLiner>
-          Classification is the process of predicting the class of given data
-          points.
-        </OneLiner>
-        <QA question={trainingData.title} answer={trainingData.data} />
-        <UnOrderdList
-          heading={machineLearningSetsData.title}
-          description={machineLearningSetsData.description}
-          listData={machineLearningSetsData.list}
-        />
-        <QA
-          question={trainingSubsetData.title}
-          answer={trainingSubsetData.data}
-        />
-        <QA
-          question={validationSubsetData.title}
-          answer={validationSubsetData.data}
-        />
-        <UnOrderdList
-          heading={testSetsData.title}
-          description={testSetsData.description}
-          listData={testSetsData.list}
-        />
-      </main>
+      <Layout title="Supervised Learning - AI">
+        <>
+          <UnOrderdList
+            heading={supervisedLearningData.title}
+            listData={supervisedLearningData.list}
+          />
+          <UnOrderdList
+            heading={supervisedLearningBreakdown.title}
+            listData={supervisedLearningBreakdown.list}
+          />
+          <QA question={regressionData.title} answer={regressionData.data} />
+          <QA
+            question={neuralNetworksData.title}
+            answer={neuralNetworksData.data}
+          />
+          <QA
+            question={classificationData.title}
+            answer={classificationData.data}
+          />
+          <UnOrderdList
+            heading={classificationForms.title}
+            description={classificationForms.description}
+            listData={classificationForms.list}
+          />
+          <QA question={featuresData.title} answer={featuresData.data} />
+          <OneLiner>
+            Classification is the process of predicting the class of given data
+            points.
+          </OneLiner>
+          <QA question={trainingData.title} answer={trainingData.data} />
+          <UnOrderdList
+            heading={machineLearningSetsData.title}
+            description={machineLearningSetsData.description}
+            listData={machineLearningSetsData.list}
+          />
+          <QA
+            question={trainingSubsetData.title}
+            answer={trainingSubsetData.data}
+          />
+          <QA
+            question={validationSubsetData.title}
+            answer={validationSubsetData.data}
+          />
+          <UnOrderdList
+            heading={testSetsData.title}
+            description={testSetsData.description}
+            listData={testSetsData.list}
+          />
+        </>
+      </Layout>
     </>
   );
 };

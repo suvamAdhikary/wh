@@ -1,0 +1,29 @@
+.two-col-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* padding: 0.5rem; */
+}
+
+.two-col-table {
+  border: 2px solid var(--bg-dark);
+  border-collapse: collapse;
+}
+
+.two-col-table__head {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.two-col-table__head--headings {
+  border: 1px solid var(--clr-light-2);
+  border-collapse: collapse;
+  padding: 0.25rem 0.5rem;
+  text-align: start;
+}
+
+.two-col-table__cells {
+  border: 1px solid var(--clr-light-2);
+  padding: 0.25rem 0.5rem;
+  /* text-align: center; */
+}

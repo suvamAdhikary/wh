@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import OneLiner from "../../../components/OneLiner";
 import UnOrderdList from "../../../components/UnOrderdList";
 
@@ -55,76 +56,79 @@ const IssuesEthicsBias: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <OneLiner>The number one key challenge of AI is privacy.</OneLiner>
-        <OneLiner>
-          Whoever owns the rights to use the algorithm owns it&apos;s applications.
-        </OneLiner>
-        <OneLiner>
-          Ethics is not a technological problem, ethics is a human problem.
-        </OneLiner>
-        <OneLiner>
-          Humans subconsciously apply certain kinds of bias that becomes obvious
-          in large scale data which can then impact Machine Learning algorithm
-          outcomes if those data sets are used for training.
-        </OneLiner>
-        <OneLiner>
-          AI is extremely powerful and can be used in ways that negatively
-          affect society.{" "}
-        </OneLiner>
-        <UnOrderdList
-          heading={AIEthicsData.title}
-          description={AIEthicsData.description}
-          listData={AIEthicsData.list}
-        />
-        <OneLiner>Experts must guard against introducing bias</OneLiner>
-        <OneLiner>
-          AI powered risk assessment systems used in courts that help predict
-          the probability of a person reoffending and hence provide guidelines
-          for sentencing or granting parole based on the calculated risk of
-          recidivism. There is concern that these systems may be biased against
-          people of color.
-        </OneLiner>
-        <OneLiner>
-          Developers of AI systems can guard against introducing bias by
-          providing effective training data and performing regular tests and
-          audits to ensure the system is performing as expected.
-        </OneLiner>
-        <UnOrderdList
-          heading={ethicalIssue.title}
-          description={ethicalIssue.description}
-          listData={ethicalIssue.list}
-        />
-        <UnOrderdList
-          heading={trustData.title}
-          description={trustData.description}
-          listData={trustData.list}
-        />
-        <OneLiner>
-          Jobs which have repeatable tasks, whether in office work or manual
-          work, are good candidates for being replaced by AI systems.
-        </OneLiner>
-        <UnOrderdList
-          heading={AIJobs.title}
-          description={AIJobs.description}
-          listData={AIJobs.list}
-        />
-        <OneLiner>
-          Concern among economists that developing countries are at even greater
-          risk from AI encroaching into the job market with low-wage jobs
-          quickly being lost.
-        </OneLiner>
-        <OneLiner>
-          There are some ways that a developing country with many people looking
-          for work can participate in the development of AI, and gain some
-          benefits from the technology.
-        </OneLiner>
-        <UnOrderdList
-          heading={importantPoints.title}
-          description={importantPoints.description}
-          listData={importantPoints.list}
-        />
-      </main>
+      <Layout title="Issues Ethics Bias - AI">
+        <>
+          <OneLiner>The number one key challenge of AI is privacy.</OneLiner>
+          <OneLiner>
+            Whoever owns the rights to use the algorithm owns it&apos;s
+            applications.
+          </OneLiner>
+          <OneLiner>
+            Ethics is not a technological problem, ethics is a human problem.
+          </OneLiner>
+          <OneLiner>
+            Humans subconsciously apply certain kinds of bias that becomes
+            obvious in large scale data which can then impact Machine Learning
+            algorithm outcomes if those data sets are used for training.
+          </OneLiner>
+          <OneLiner>
+            AI is extremely powerful and can be used in ways that negatively
+            affect society.{" "}
+          </OneLiner>
+          <UnOrderdList
+            heading={AIEthicsData.title}
+            description={AIEthicsData.description}
+            listData={AIEthicsData.list}
+          />
+          <OneLiner>Experts must guard against introducing bias</OneLiner>
+          <OneLiner>
+            AI powered risk assessment systems used in courts that help predict
+            the probability of a person reoffending and hence provide guidelines
+            for sentencing or granting parole based on the calculated risk of
+            recidivism. There is concern that these systems may be biased
+            against people of color.
+          </OneLiner>
+          <OneLiner>
+            Developers of AI systems can guard against introducing bias by
+            providing effective training data and performing regular tests and
+            audits to ensure the system is performing as expected.
+          </OneLiner>
+          <UnOrderdList
+            heading={ethicalIssue.title}
+            description={ethicalIssue.description}
+            listData={ethicalIssue.list}
+          />
+          <UnOrderdList
+            heading={trustData.title}
+            description={trustData.description}
+            listData={trustData.list}
+          />
+          <OneLiner>
+            Jobs which have repeatable tasks, whether in office work or manual
+            work, are good candidates for being replaced by AI systems.
+          </OneLiner>
+          <UnOrderdList
+            heading={AIJobs.title}
+            description={AIJobs.description}
+            listData={AIJobs.list}
+          />
+          <OneLiner>
+            Concern among economists that developing countries are at even
+            greater risk from AI encroaching into the job market with low-wage
+            jobs quickly being lost.
+          </OneLiner>
+          <OneLiner>
+            There are some ways that a developing country with many people
+            looking for work can participate in the development of AI, and gain
+            some benefits from the technology.
+          </OneLiner>
+          <UnOrderdList
+            heading={importantPoints.title}
+            description={importantPoints.description}
+            listData={importantPoints.list}
+          />
+        </>
+      </Layout>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../../components/layout/Layout";
 import OneLiner from "../../../../components/OneLiner";
 import UnOrderdList from "../../../../components/UnOrderdList";
 
@@ -49,28 +50,30 @@ const Application: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <UnOrderdList
-          heading={naturalLanguageProcessing.title}
-          listData={naturalLanguageProcessing.list}
-        />
-        <UnOrderdList
-          heading={speechToText.title}
-          listData={speechToText.list}
-        />
-        <UnOrderdList
-          heading={textToSpeech.title}
-          listData={textToSpeech.list}
-        />
-        <UnOrderdList
-          heading={computerVision.title}
-          listData={computerVision.list}
-        />
-        <OneLiner>
-          Self-driving cars is an application of AI that can utilize NLP,
-          speech, and most importantly, computer vision.
-        </OneLiner>
-      </main>
+      <Layout title="Application - AI">
+        <>
+          <UnOrderdList
+            heading={naturalLanguageProcessing.title}
+            listData={naturalLanguageProcessing.list}
+          />
+          <UnOrderdList
+            heading={speechToText.title}
+            listData={speechToText.list}
+          />
+          <UnOrderdList
+            heading={textToSpeech.title}
+            listData={textToSpeech.list}
+          />
+          <UnOrderdList
+            heading={computerVision.title}
+            listData={computerVision.list}
+          />
+          <OneLiner>
+            Self-driving cars is an application of AI that can utilize NLP,
+            speech, and most importantly, computer vision.
+          </OneLiner>
+        </>
+      </Layout>
     </>
   );
 };

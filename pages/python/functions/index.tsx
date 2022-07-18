@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import OneLiner from "../../../components/OneLiner";
 import QA from "../../../components/QA";
 import UnOrderdList from "../../../components/UnOrderdList";
@@ -36,24 +37,26 @@ const Functions: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <OneLiner>
-          A function is some stored code that we use. A function takes some
-          input and produces an output.
-        </OneLiner>
-        <UnOrderdList
-          heading="Building our Own Functions"
-          listData={buildingOurOwnFunctionsData}
-        />
-        <UnOrderdList heading="Arguments" listData={argumentsData} />
-        <QA question="Parameters" answer={parametersData} />
-        <QA question="Return Values" answer={returnValuesData} />
-        <UnOrderdList heading="Return Value" listData={returnValueData} />
-        <UnOrderdList
-          heading="Multiple Parameters / Arguments"
-          listData={multipleParametersArgumentsData}
-        />
-      </main>
+      <Layout title="Functions - Python">
+        <>
+          <OneLiner>
+            A function is some stored code that we use. A function takes some
+            input and produces an output.
+          </OneLiner>
+          <UnOrderdList
+            heading="Building our Own Functions"
+            listData={buildingOurOwnFunctionsData}
+          />
+          <UnOrderdList heading="Arguments" listData={argumentsData} />
+          <QA question="Parameters" answer={parametersData} />
+          <QA question="Return Values" answer={returnValuesData} />
+          <UnOrderdList heading="Return Value" listData={returnValueData} />
+          <UnOrderdList
+            heading="Multiple Parameters / Arguments"
+            listData={multipleParametersArgumentsData}
+          />
+        </>
+      </Layout>
     </>
   );
 };

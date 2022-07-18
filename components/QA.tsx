@@ -9,17 +9,14 @@ export interface QAProps {
 const QA = ({ id, question, answer }: QAProps) => {
   return (
     <>
-      <div
-        id={id}
-        className="flex flex-col gap-2 py-2 px-2 border border-solid border-sky-400"
-      >
+      <article id={id} className="qa-wrapper">
         <h5>{question} :-</h5>
         {answer?.split("\n").map((line) => (
-          <p className="indent-4" key={line}>
+          <p className="qa__ans" key={line}>
             {line}
           </p>
         ))}
-      </div>
+      </article>
     </>
   );
 };

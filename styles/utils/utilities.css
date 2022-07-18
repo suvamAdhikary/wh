@@ -1,0 +1,49 @@
+/* @docs
+label: Hidden Attribute
+note: |
+  Maintain `hidden` behaviour when overriding `display` values.
+  category: global
+*/
+
+[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth !important;
+  }
+}
+
+#top {
+  position: fixed;
+  top: 5rem;
+}
+
+.bg-main-dark {
+  background-color: var(--bg-dark);
+}
+
+.bg-main-light {
+  background-color: var(--bg-light);
+}
+
+.font-main-light {
+  color: var(--font-light);
+}
+
+.font-main-dark {
+  color: var(--font-dark);
+}
+
+/* .flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+} */
