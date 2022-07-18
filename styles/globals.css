@@ -16,9 +16,11 @@
 @import "./components/list.css";
 @import "./components/qa.css";
 @import "./components/table.css";
+@import "./components/heading.css";
 @import "./components/dynamicComponents.css";
 
 /* pages */
+@import "./pages/meta.css";
 
 /* utils */
 @import "./utils/variables.css";

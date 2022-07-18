@@ -29,6 +29,9 @@ const Header = ({ accessTagsList }: headerProps) => {
         <nav>
           <ul className="main-nav-list">
             <li className="nav-buttons">
+              <Link href={"/meta"}>META</Link>
+            </li>
+            <li className="nav-buttons">
               <Link href={"/cloud"}>CLOUD</Link>
             </li>
             <li className="nav-buttons">

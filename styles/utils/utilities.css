@@ -20,30 +20,10 @@ note: |
   top: 5rem;
 }
 
-.bg-main-dark {
-  background-color: var(--bg-dark);
-}
-
-.bg-main-light {
-  background-color: var(--bg-light);
-}
-
-.font-main-light {
-  color: var(--font-light);
-}
-
-.font-main-dark {
-  color: var(--font-dark);
-}
-
-/* .flex {
+.nav-on-main {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-row {
-  flex-direction: row;
-} */
