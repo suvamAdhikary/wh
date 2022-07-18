@@ -15,24 +15,21 @@ const UnOrderdList = ({
 }: unOrderdListProps) => {
   return (
     <>
-      <div
-        id={id}
-        className="flex flex-col gap-2 py-2 px-2 pl-6 border border-solid border-sky-400"
-      >
-        {heading && <h4>{heading} :-</h4>}
+      <article id={id} className="common-unorderd-list-wrapper">
+        {heading && <h5>{heading} :-</h5>}
         {description?.split("\n").map((line) => (
-          <p className="indent-4" key={line}>
+          <p className="list-description" key={line}>
             {line}
           </p>
         ))}
-        <ul>
+        <ul className="common-unorderd-list">
           {listData?.map((el, i) => (
-            <li className="list-disc" key={`${el}-${i}`}>
+            <li className="common-unorderd-list__item" key={`${el}-${i}`}>
               {el}
             </li>
           ))}
         </ul>
-      </div>
+      </article>
     </>
   );
 };

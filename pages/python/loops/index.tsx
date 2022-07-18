@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import QA from "../../../components/QA";
 import UnOrderdList from "../../../components/UnOrderdList";
 
@@ -38,25 +39,27 @@ const Loops: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <QA question={loopsData.heading} answer={loopsData.data} />
-        <UnOrderdList
-          heading={breakingOutOfALoopData.heading}
-          listData={breakingOutOfALoopData.list}
-        />
-        <QA
-          question={finishingAnIterationWithContinueData.heading}
-          answer={finishingAnIterationWithContinueData.list}
-        />
-        <QA
-          question={aSimpleDefiniteLoopData.heading}
-          answer={aSimpleDefiniteLoopData.list}
-        />
-        <UnOrderdList
-          heading={lookingAtInData.heading}
-          listData={lookingAtInData.list}
-        />
-      </main>
+      <Layout title="Loops - Python">
+        <>
+          <QA question={loopsData.heading} answer={loopsData.data} />
+          <UnOrderdList
+            heading={breakingOutOfALoopData.heading}
+            listData={breakingOutOfALoopData.list}
+          />
+          <QA
+            question={finishingAnIterationWithContinueData.heading}
+            answer={finishingAnIterationWithContinueData.list}
+          />
+          <QA
+            question={aSimpleDefiniteLoopData.heading}
+            answer={aSimpleDefiniteLoopData.list}
+          />
+          <UnOrderdList
+            heading={lookingAtInData.heading}
+            listData={lookingAtInData.list}
+          />
+        </>
+      </Layout>
     </>
   );
 };

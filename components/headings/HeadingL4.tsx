@@ -4,7 +4,7 @@ import { headingProps } from "../../interfaces/heading";
 const HeadingL4 = ({ title }: headingProps) => {
   return (
     <>
-      <h4 className="font-bold text-lg"> {title} </h4>
+      <h4> {title} </h4>
     </>
   );
 };

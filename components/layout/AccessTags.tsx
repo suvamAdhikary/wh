@@ -11,13 +11,10 @@ export interface accessTagsProps {
 const AccessTags = ({ list }: accessTagsProps) => {
   return (
     <>
-      <nav className="flex flex-row w-full overflow-x-scroll scroll-smooth">
-        <ul className="flex flex-row items-center h-full list-none justify-evenly px-2 gap-1">
+      <nav className="access-nav">
+        <ul className="main-nav-list">
           {list.map((item) => (
-            <li
-              key={`${item.name}-${item.link}`}
-              className="flex flex-col items-center justify-center hover:text-white hover:bg-slate-600 p-0 rounded-lg my-0"
-            >
+            <li key={`${item.name}-${item.link}`} className="nav-buttons">
               <Link href={item.link}>{item.name}</Link>
             </li>
           ))}

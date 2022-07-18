@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import TwoColTable from "../../../components/tables/TwoColTable";
 import UnOrderdList from "../../../components/UnOrderdList";
 
@@ -56,21 +57,23 @@ const Conditional: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <UnOrderdList
-          heading="Boolean expressions"
-          listData={booleanExpressionsData}
-        />
-        <TwoColTable
-          heading="Comparison Operators"
-          cols={comparisonOperatorsData.cols}
-          tableData={comparisonOperatorsData.data}
-        />
-        <UnOrderdList
-          heading="The try / except Structure"
-          listData={theTryExceptStructureData}
-        />
-      </main>
+      <Layout title="Conditional - Python">
+        <>
+          <UnOrderdList
+            heading="Boolean expressions"
+            listData={booleanExpressionsData}
+          />
+          <TwoColTable
+            heading="Comparison Operators"
+            cols={comparisonOperatorsData.cols}
+            tableData={comparisonOperatorsData.data}
+          />
+          <UnOrderdList
+            heading="The try / except Structure"
+            listData={theTryExceptStructureData}
+          />
+        </>
+      </Layout>
     </>
   );
 };

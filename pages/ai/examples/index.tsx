@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import OneLiner from "../../../components/OneLiner";
 import QA from "../../../components/QA";
 import UnOrderdList from "../../../components/UnOrderdList";
@@ -22,23 +23,25 @@ const Examples: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <QA question="AI algorithms" answer={AIAlgorithmsData} />
-        <OneLiner>
-          AI-powered applications are creating an impact in diverse areas such
-          as Healthcare, Education, Transcription, Law Enforcement, Customer
-          Service, Mobile and Social Media Apps, Financial Fraud Prevention,
-          Patient Diagnoses, Clinical Trials, and more.
-        </OneLiner>
-        <UnOrderdList
-          heading="Some of these applications include"
-          listData={examples}
-        />
-        <UnOrderdList
-          heading="Some famous applications of AI from IBM include"
-          listData={femousExamples}
-        />
-      </main>
+      <Layout title="AI Examples">
+        <>
+          <QA question="AI algorithms" answer={AIAlgorithmsData} />
+          <OneLiner>
+            AI-powered applications are creating an impact in diverse areas such
+            as Healthcare, Education, Transcription, Law Enforcement, Customer
+            Service, Mobile and Social Media Apps, Financial Fraud Prevention,
+            Patient Diagnoses, Clinical Trials, and more.
+          </OneLiner>
+          <UnOrderdList
+            heading="Some of these applications include"
+            listData={examples}
+          />
+          <UnOrderdList
+            heading="Some famous applications of AI from IBM include"
+            listData={femousExamples}
+          />
+        </>
+      </Layout>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
+import Layout from "../../../components/layout/Layout";
 import OneLiner from "../../../components/OneLiner";
 import QA from "../../../components/QA";
 import UnOrderdList from "../../../components/UnOrderdList";
@@ -52,41 +53,43 @@ const MachineLearning: NextPage = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 px-8 py-4">
-        <QA
-          question={machineLearningDef.title}
-          answer={machineLearningDef.data}
-        />
-        <UnOrderdList
-          heading={machineLearningData.title}
-          description={machineLearningData.description}
-          listData={machineLearningData.list}
-        />
-        <OneLiner>
-          Machine Learning relies on defining behavioral rules by examining and
-          comparing large datasets to find common patterns.
-        </OneLiner>
-        <QA
-          question={supervisedLearningData.title}
-          answer={supervisedLearningData.data}
-        />
-        <UnOrderdList
-          heading={unsupervisedLearningData.title}
-          listData={unsupervisedLearningData.list}
-        />
-        {/* <QA
+      <Layout title="Machine Learning - AI">
+        <>
+          <QA
+            question={machineLearningDef.title}
+            answer={machineLearningDef.data}
+          />
+          <UnOrderdList
+            heading={machineLearningData.title}
+            description={machineLearningData.description}
+            listData={machineLearningData.list}
+          />
+          <OneLiner>
+            Machine Learning relies on defining behavioral rules by examining
+            and comparing large datasets to find common patterns.
+          </OneLiner>
+          <QA
+            question={supervisedLearningData.title}
+            answer={supervisedLearningData.data}
+          />
+          <UnOrderdList
+            heading={unsupervisedLearningData.title}
+            listData={unsupervisedLearningData.list}
+          />
+          {/* <QA
           question={reinforcementLearningData.title}
           answer={reinforcementLearningData.data}
         /> */}
-        <UnOrderdList
-          heading={reinforcementLearningData.title}
-          listData={reinforcementLearningData.list}
-        />
-        <QA
-          question={machineLearningModelData.title}
-          answer={machineLearningModelData.data}
-        />
-      </main>
+          <UnOrderdList
+            heading={reinforcementLearningData.title}
+            listData={reinforcementLearningData.list}
+          />
+          <QA
+            question={machineLearningModelData.title}
+            answer={machineLearningModelData.data}
+          />
+        </>
+      </Layout>
     </>
   );
 };

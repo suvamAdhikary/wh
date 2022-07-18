@@ -1,0 +1,11 @@
+.button-go-to-top {
+  position: fixed;
+  z-index: 999;
+  right: 0.5rem;
+  bottom: 1rem;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 0.25rem;
+  border-radius: 50%;
+  border: none;
+}
