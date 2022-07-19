@@ -1,7 +1,7 @@
 import React from "react";
 import HeadingL1 from "../../../../headings/HeadingL1";
-import UnOrderdList from "../../../../UnOrderdList";
-import StartWithWebDev from "./StartWithWebDev";
+import UnOrderdList from "../../../../lists/UnOrderdList";
+import StartWithWebDev from "./StartWithWebDev/StartWithWebDev";
 
 const Introduction = () => {
   const learningObjectives = {

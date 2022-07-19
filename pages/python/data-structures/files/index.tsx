@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../../../../components/layout/Layout";
 import OneLiner from "../../../../components/OneLiner";
 import QA from "../../../../components/QA";
-import UnOrderdList from "../../../../components/UnOrderdList";
+import UnOrderdList from "../../../../components/lists/UnOrderdList";
 
 const Files: NextPage = () => {
   const openingAFile = {

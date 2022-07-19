@@ -6,7 +6,7 @@
 }
 
 .list-description {
-    text-indent: 1rem;
+  text-indent: 1rem;
 }
 
 .common-unorderd-list {
@@ -15,5 +15,5 @@
 
 .common-unorderd-list__item {
   list-style-type: disc;
+  padding: 0.125rem 0;
 }
-

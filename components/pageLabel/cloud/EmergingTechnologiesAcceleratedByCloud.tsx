@@ -2,7 +2,7 @@ import React from "react";
 import Gap from "../../Gap";
 import HeadingL2 from "../../headings/HeadingL2";
 import QA from "../../QA";
-import UnOrderdList from "../../UnOrderdList";
+import UnOrderdList from "../../lists/UnOrderdList";
 
 const EmergingTechnologiesAcceleratedByCloud = () => {
   const IoTAndCloud = {
