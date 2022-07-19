@@ -1,7 +1,7 @@
 import React from "react";
 import Gap from "../../Gap";
 import HeadingL2 from "../../headings/HeadingL2";
-import UnOrderdList from "../../UnOrderdList";
+import UnOrderdList from "../../lists/UnOrderdList";
 
 const BusinessCaseForCloudComputing = () => {
   const cloudAdoptionCaseStudies = {

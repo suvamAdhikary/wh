@@ -4,7 +4,7 @@ import Heading5 from "../../../../components/headings/Heading5";
 import Layout from "../../../../components/layout/Layout";
 import OneLiner from "../../../../components/OneLiner";
 import QA from "../../../../components/QA";
-import UnOrderdList from "../../../../components/UnOrderdList";
+import UnOrderdList from "../../../../components/lists/UnOrderdList";
 
 const Tuples: NextPage = () => {
   const moreEfficient = {

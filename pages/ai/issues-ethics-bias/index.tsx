@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import React from "react";
 import Layout from "../../../components/layout/Layout";
 import OneLiner from "../../../components/OneLiner";
-import UnOrderdList from "../../../components/UnOrderdList";
+import UnOrderdList from "../../../components/lists/UnOrderdList";
 
 const IssuesEthicsBias: NextPage = () => {
   const AIEthicsData = {
