@@ -18,6 +18,10 @@
   vertical-align: middle;
   text-align: center;
   font-size: 0.75rem;
+  position: fixed;
+  z-index: 99;
+  right: 1rem;
+  top: 6rem;
 }
 
 .transparent-link-btn__wrapper {
@@ -47,4 +51,13 @@
 .nav-on-main__btn:hover {
   background-color: var(--bg-dark);
   color: var(--text-light);
+  cursor: pointer;
+}
+
+.ham-btn {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  left: 1rem;
+  top: 6rem;
 }

@@ -10,6 +10,7 @@
 @import "./layout/header.css";
 @import "./layout/footer.css";
 @import "./layout/layout.css";
+@import "./layout/aside.css";
 
 /* components */
 @import "./components/button.css";
@@ -18,6 +19,7 @@
 @import "./components/table.css";
 @import "./components/heading.css";
 @import "./components/dynamicComponents.css";
+@import "./components/modal.css";
 
 /* pages */
 @import "./pages/meta.css";

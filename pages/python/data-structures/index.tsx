@@ -1,11 +1,22 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
+import { useApp } from "../../../context/AppContext";
 
 const DataStructure: NextPage = () => {
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
+
   return (
     <>
-      <Layout title="Python - Data Structures" >
+      <Layout title="Python - Data Structures">
         <>
           <div>DataStructure</div>
         </>

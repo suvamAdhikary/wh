@@ -1,7 +1,8 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
 import UnOrderdList from "../../../components/lists/UnOrderdList";
+import { useApp } from "../../../context/AppContext";
 
 const FutureCareer: NextPage = () => {
   const futureWithAI = {
@@ -23,6 +24,16 @@ const FutureCareer: NextPage = () => {
       "Infuse:- Operationalize AI throughout your business.",
     ],
   };
+
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>
