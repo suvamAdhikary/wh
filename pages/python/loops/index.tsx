@@ -1,10 +1,13 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
 import QA from "../../../components/QA";
-import UnOrderdList from "../../../components/UnOrderdList";
+import UnOrderdList from "../../../components/lists/UnOrderdList";
+import { useApp } from "../../../context/AppContext";
 
 const Loops: NextPage = () => {
+  const { showBackBtn, hideBackBtn } = useApp();
+
   const loopsData = {
     heading: "Loops",
     data: "Loops (repeted steps) have iteration variables that change each time through a loop. Often these iteration variables go through a sequence of numbers.",
@@ -36,6 +39,14 @@ const Loops: NextPage = () => {
       "The iteration variable move through all of the values in the sequence",
     ],
   };
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

@@ -1,9 +1,10 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
 import OneLiner from "../../../components/OneLiner";
 import QA from "../../../components/QA";
-import UnOrderdList from "../../../components/UnOrderdList";
+import UnOrderdList from "../../../components/lists/UnOrderdList";
+import { useApp } from "../../../context/AppContext";
 
 const Examples: NextPage = () => {
   const AIAlgorithmsData =
@@ -20,6 +21,16 @@ const Examples: NextPage = () => {
     "Watson teaming up with the Academy to deliver an amplified Grammy experience for millions of fans.",
     "Watson collaborating with ESPN to serve 10 million users of the ESPN Fantasy App sharing insights that help them make better decisions to win their weekly matchups.",
   ];
+
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

@@ -1,8 +1,9 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
 import QA from "../../../components/QA";
-import UnOrderdList from "../../../components/UnOrderdList";
+import UnOrderdList from "../../../components/lists/UnOrderdList";
+import { useApp } from "../../../context/AppContext";
 
 const Expressions: NextPage = () => {
   const constantsData = [
@@ -146,6 +147,15 @@ const Expressions: NextPage = () => {
     "Document who wrote the code or other ancillary information",
     "Turn off a line of code - perhaps temporarily",
   ];
+
+  const { showBackBtn, hideBackBtn } = useApp();
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

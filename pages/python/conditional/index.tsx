@@ -1,8 +1,9 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
 import TwoColTable from "../../../components/tables/TwoColTable";
-import UnOrderdList from "../../../components/UnOrderdList";
+import UnOrderdList from "../../../components/lists/UnOrderdList";
+import { useApp } from "../../../context/AppContext";
 
 const Conditional: NextPage = () => {
   const booleanExpressionsData = [
@@ -54,6 +55,15 @@ const Conditional: NextPage = () => {
     "If the code in the try works - the except is skipped",
     "If the code in the try fails - it jumps to the except section",
   ];
+
+  const { showBackBtn, hideBackBtn } = useApp();
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

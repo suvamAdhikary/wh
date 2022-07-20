@@ -4,7 +4,7 @@ import HeadingL3 from "../../headings/HeadingL3";
 import HeadingL4 from "../../headings/HeadingL4";
 import OneLiner from "../../OneLiner";
 import QA from "../../QA";
-import UnOrderdList from "../../UnOrderdList";
+import UnOrderdList from "../../lists/UnOrderdList";
 
 const DefinitionAndEssentialCharacteristicsOfCloudComputing = () => {
   const cloudComputing = {

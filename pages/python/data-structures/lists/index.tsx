@@ -1,8 +1,9 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../../components/layout/Layout";
 import QA from "../../../../components/QA";
-import UnOrderdList from "../../../../components/UnOrderdList";
+import UnOrderdList from "../../../../components/lists/UnOrderdList";
+import { useApp } from "../../../../context/AppContext";
 
 const Lists: NextPage = () => {
   const programming = {
@@ -126,6 +127,16 @@ const Lists: NextPage = () => {
       "Sometimes we split a line one way, and thenn grab one of the pieces of the line and split that piece again",
     ],
   };
+
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

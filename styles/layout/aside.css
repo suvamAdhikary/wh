@@ -1,0 +1,32 @@
+.aside-overly {
+  position: fixed;
+  top: 8rem;
+  left: 0;
+  right: 70%;
+  bottom: 0;
+  background-color: #90caf9e6;
+  z-index: 9999;
+}
+
+.aside-modal__main {
+  top: 8rem;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  left: 0;
+  right: 70%;
+  z-index: 9999;
+  bottom: 0px;
+}
+
+.modal__main main {
+  width: 100%;
+}
+
+.aside-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

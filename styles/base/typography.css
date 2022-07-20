@@ -96,9 +96,11 @@ h6 {
   /* font-size: 0.67rem; */
   font-size: 0.83rem;
 }
-p {
+p,
+li {
   font-size: 1rem;
   letter-spacing: 0.02rem;
+  line-height: 1.25rem;
 }
 
 /* @docs
@@ -108,7 +110,7 @@ note: |
 category: typography
 */
 h1 {
-  margin: 0.67em 0;
+  margin: 0 0 0.67em;
 }
 
 h1,

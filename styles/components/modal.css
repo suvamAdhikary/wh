@@ -1,0 +1,26 @@
+.overly {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000e6;
+  z-index: 9999;
+}
+
+.modal__main {
+  top: 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  bottom: 0px;
+}
+
+.modal__main main {
+  width: 100%;
+}

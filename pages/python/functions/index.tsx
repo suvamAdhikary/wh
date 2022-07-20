@@ -1,9 +1,10 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
 import OneLiner from "../../../components/OneLiner";
 import QA from "../../../components/QA";
-import UnOrderdList from "../../../components/UnOrderdList";
+import UnOrderdList from "../../../components/lists/UnOrderdList";
+import { useApp } from "../../../context/AppContext";
 
 const Functions: NextPage = () => {
   const buildingOurOwnFunctionsData = [
@@ -34,6 +35,15 @@ const Functions: NextPage = () => {
     "We simply add more than one arguments when we call the function",
     "We match the number and order of arguments and parameters",
   ];
+
+  const { showBackBtn, hideBackBtn } = useApp();
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

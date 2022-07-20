@@ -1,10 +1,11 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Heading5 from "../../../../components/headings/Heading5";
 import Layout from "../../../../components/layout/Layout";
 import OneLiner from "../../../../components/OneLiner";
 import QA from "../../../../components/QA";
-import UnOrderdList from "../../../../components/UnOrderdList";
+import UnOrderdList from "../../../../components/lists/UnOrderdList";
+import { useApp } from "../../../../context/AppContext";
 
 const Tuples: NextPage = () => {
   const moreEfficient = {
@@ -49,6 +50,16 @@ const Tuples: NextPage = () => {
       "We do this with a for loop that creates a list of tuples",
     ],
   };
+
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

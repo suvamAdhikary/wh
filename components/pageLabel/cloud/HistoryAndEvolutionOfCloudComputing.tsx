@@ -2,7 +2,7 @@ import React from "react";
 import HeadingL3 from "../../headings/HeadingL3";
 import OneLiner from "../../OneLiner";
 import QA from "../../QA";
-import UnOrderdList from "../../UnOrderdList";
+import UnOrderdList from "../../lists/UnOrderdList";
 
 const HistoryAndEvolutionOfCloudComputing = () => {
   const y1950 = {

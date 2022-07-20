@@ -7,5 +7,57 @@
   color: var(--text-light);
   padding: 0.25rem;
   border-radius: 50%;
-  border: none;
+}
+
+.button-back {
+  width: fit-content;
+  background-color: var(--clr-dark-5);
+  color: var(--text-light);
+  padding: 0.15rem 1rem;
+  border-radius: 2.5rem 1.5rem 1.5rem 2.5rem;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.75rem;
+  position: fixed;
+  z-index: 99;
+  right: 1rem;
+  top: 6rem;
+}
+
+.transparent-link-btn__wrapper {
+  width: 100%;
+  display: flex;
+  padding: 0 0.25rem 1rem;
+}
+
+.transparent-link-btn {
+  background: transparent;
+  margin: 0 auto;
+  padding: 0.25rem;
+  border: 1px solid var(--bg-dark);
+  border-radius: 1.5rem;
+}
+
+.nav-on-main__btn > a {
+  white-space: nowrap;
+}
+
+.nav-on-main__btn {
+  border: 1px double var(--bg-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.nav-on-main__btn:hover {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.ham-btn {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  left: 1rem;
+  top: 6rem;
 }
