@@ -151,20 +151,27 @@ const MetaHome = () => {
       <section className="meta-home-wrapper">
         <table className="meta-home__table">
           <thead className="meta-home__table-head">
-            <tr>
-              {colList.map((col) => (
-                <th key={col.title} className="meta-home__table-head--wrapper">
+            <tr key="meta-table-head">
+              {colList.map((col, index) => (
+                <th
+                  key={`${col.title}-${index}`}
+                  className="meta-home__table-head--wrapper"
+                >
                   <HeadCell title={col.title} icon={col.icon} />
                 </th>
               ))}
             </tr>
           </thead>
           <tbody className="meta-home__table-body">
-            {data.map((row) => (
-              <tr key={row.key} className="meta-home__tbody-row">
-                {row.data.map((cell) => (
+            {data.map((row, index) => (
+              <tr key={`${row.key}-${index}`} className="meta-home__tbody-row">
+                {row.data.map((cell, index) => (
                   <td
-                    key={cell.description ? cell.description : cell.link}
+                    key={
+                      cell.description
+                        ? `${cell.description}-${index}`
+                        : `${cell.link}-${index}`
+                    }
                     className="meta-home__tbody-cell--wrapper"
                   >
                     {cell.linkButton ? (

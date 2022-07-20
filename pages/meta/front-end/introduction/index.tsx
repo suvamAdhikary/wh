@@ -1,16 +1,32 @@
 import { NextPage } from "next";
-import React from "react";
-import Back from "../../../../components/buttons/Back";
+import React, { useEffect } from "react";
 import Layout from "../../../../components/layout/Layout";
 import Introduction from "../../../../components/pageLabel/meta/FrontEnd/Introduction/Introduction";
+import { useApp } from "../../../../context/AppContext";
 
-const IntroductionToFrontEndDev: NextPage = () => {
+export interface introductionToFrontEndDevProps {
+  handleHambergarClick?: any;
+}
+
+const IntroductionToFrontEndDev: NextPage = ({
+  handleHambergarClick,
+}: introductionToFrontEndDevProps) => {
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn();
+    };
+  }, []);
+
   return (
     <>
-      <Layout title="Meta - Introduction to Front End Development">
-        <>
-          <Back />
-        </>
+      <Layout
+        title="Meta - Introduction to Front End Development"
+        handleHambergarClick={handleHambergarClick}
+      >
         <>
           <Introduction />
         </>

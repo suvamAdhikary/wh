@@ -27,3 +27,7 @@ note: |
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+.not-rounded {
+  border-radius: 0;
+}

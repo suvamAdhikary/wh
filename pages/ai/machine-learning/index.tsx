@@ -1,9 +1,10 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
 import OneLiner from "../../../components/OneLiner";
 import QA from "../../../components/QA";
 import UnOrderdList from "../../../components/lists/UnOrderdList";
+import { useApp } from "../../../context/AppContext";
 
 const MachineLearning: NextPage = () => {
   const machineLearningDef = {
@@ -50,6 +51,16 @@ const MachineLearning: NextPage = () => {
     title: "Machine Learning Model",
     data: "A machine learning model is the algorithm used to find patterns in the data without the programmer having to explictly program these patterns.",
   };
+
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

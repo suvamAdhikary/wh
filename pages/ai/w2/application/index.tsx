@@ -1,8 +1,9 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../../components/layout/Layout";
 import OneLiner from "../../../../components/OneLiner";
 import UnOrderdList from "../../../../components/lists/UnOrderdList";
+import { useApp } from "../../../../context/AppContext";
 
 const Application: NextPage = () => {
   const naturalLanguageProcessing = {
@@ -47,6 +48,16 @@ const Application: NextPage = () => {
       "Online photo libraries like Google Photos, use computer vision to detect objects and classify images by the type of content they contain",
     ],
   };
+
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

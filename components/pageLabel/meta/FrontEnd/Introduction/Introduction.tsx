@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import HeadingL1 from "../../../../headings/HeadingL1";
+import NavInMain from "../../../../layout/NavInMain";
 import UnOrderdList from "../../../../lists/UnOrderdList";
 import StartWithWebDev from "./StartWithWebDev/StartWithWebDev";
 
 const Introduction = () => {
+  const [activeTab, setActiveTab] = useState<string>("");
+
+  const handleTabSelection = (tabValue: string) => {
+    setActiveTab(tabValue);
+  };
+
+  const topics = [
+    {
+      name: "Get Started with Web Development",
+      value: "GetStartedwithWebDevelopment",
+      cta: () => {},
+    },
+    {
+      name: "Introduction to HTML and CSS",
+      value: "IntroductiontoHTMLandCSS",
+      cta: () => {},
+    },
+    {
+      name: "UI Frameworks",
+      value: "UIFrameworks",
+      cta: () => {},
+    },
+  ];
+
   const learningObjectives = {
     title: "Learning Objectives",
     list: [
@@ -18,12 +43,22 @@ const Introduction = () => {
 
   return (
     <>
-      <HeadingL1 title="Introduction to Front-End Development" />
-      <UnOrderdList
-        heading={learningObjectives.title}
-        listData={learningObjectives.list}
-      />
-      <StartWithWebDev />
+      {activeTab === "GetStartedwithWebDevelopment" ? (
+        <StartWithWebDev />
+      ) : activeTab === "IntroductiontoHTMLandCSS" ? (
+        <></>
+      ) : activeTab === "UIFrameworks" ? (
+        <></>
+      ) : (
+        <>
+          <HeadingL1 title="Introduction to Front-End Development" />
+          <UnOrderdList
+            heading={learningObjectives.title}
+            listData={learningObjectives.list}
+          />
+          <NavInMain menuList={topics} cta={handleTabSelection} />
+        </>
+      )}
     </>
   );
 };

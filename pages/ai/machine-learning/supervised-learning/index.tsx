@@ -1,9 +1,10 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../../components/layout/Layout";
 import OneLiner from "../../../../components/OneLiner";
 import QA from "../../../../components/QA";
 import UnOrderdList from "../../../../components/lists/UnOrderdList";
+import { useApp } from "../../../../context/AppContext";
 
 const SupervisedLearning: NextPage = () => {
   const supervisedLearningData = {
@@ -77,6 +78,16 @@ const SupervisedLearning: NextPage = () => {
       "The testing data is the data the model has never seen before and used to evaluate how good our model is. Using terms like :",
     list: ["Accuracy", "Precision", "Recall"],
   };
+
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

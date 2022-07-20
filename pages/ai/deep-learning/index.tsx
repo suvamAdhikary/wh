@@ -1,7 +1,8 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../components/layout/Layout";
 import UnOrderdList from "../../../components/lists/UnOrderdList";
+import { useApp } from "../../../context/AppContext";
 
 const DeepLearning: NextPage = () => {
   const deepLearningData = {
@@ -40,6 +41,16 @@ const DeepLearning: NextPage = () => {
       "Driverless cars",
     ],
   };
+
+  const { showBackBtn, hideBackBtn } = useApp();
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, []);
 
   return (
     <>

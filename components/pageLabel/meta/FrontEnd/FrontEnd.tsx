@@ -1,43 +1,43 @@
 import React from "react";
-import NavBtnLrg from "../../../buttons/NavBtnLrg";
 import HeadingL1 from "../../../headings/HeadingL1";
+import NavOnMain from "../../../layout/NavOnMain";
 
 const FrontEnd = () => {
   const topics = [
     {
-      text: "Introduction to Front-End Development",
+      name: "Introduction to Front-End Development",
       link: "/meta/front-end/introduction",
     },
     {
-      text: "Programming with JavaScript",
+      name: "Programming with JavaScript",
       link: "#",
     },
     {
-      text: "Version Control",
+      name: "Version Control",
       link: "#",
     },
     {
-      text: "HTML and CSS in depth",
+      name: "HTML and CSS in depth",
       link: "#",
     },
     {
-      text: "React Basics",
+      name: "React Basics",
       link: "#",
     },
     {
-      text: "Advanced React",
+      name: "Advanced React",
       link: "#",
     },
     {
-      text: "Principles of UI/UX Design",
+      name: "Principles of UI/UX Design",
       link: "#",
     },
     {
-      text: "Front-End Developer Capstone",
+      name: "Front-End Developer Capstone",
       link: "#",
     },
     {
-      text: "Coding Interview Preparation",
+      name: "Coding Interview Preparation",
       link: "#",
     },
   ];
@@ -45,13 +45,7 @@ const FrontEnd = () => {
   return (
     <>
       <HeadingL1 title="Meta Front-End Developer" />
-      <nav>
-        <ul className="nav-on-main">
-          {topics.map((topic) => (
-            <NavBtnLrg key={topic.text} link={topic.link} text={topic.text} />
-          ))}
-        </ul>
-      </nav>
+      <NavOnMain menuList={topics} />
     </>
   );
 };

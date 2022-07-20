@@ -7,7 +7,7 @@ const HeadCell = ({ title, icon }: headCellProps) => {
     <>
       <figure className="meta-home__head-cell">
         <div className="meta-home__head-cell--icon">
-          <Image src={icon} layout={"fill"} />
+          <Image src={icon} layout={"fill"} alt={title} />
         </div>
         <figcaption className="meta-home__head-cell--text">{title}</figcaption>
       </figure>

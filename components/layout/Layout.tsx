@@ -1,8 +1,12 @@
 import Head from "next/head";
 import React from "react";
+import Back from "../buttons/Back";
 import GoToTop from "../buttons/GoToTop";
 import Footer from "./Footer";
 import Header from "./Header";
+import { useApp } from "../../context/AppContext";
+import HamburgerBtn from "../buttons/HamburgerBtn";
+import SideMenu from "./SideMenu";
 
 export interface layoutProps {
   title: string;
@@ -11,9 +15,17 @@ export interface layoutProps {
     name: string;
     link: string;
   }[];
+  handleHambergarClick?: any;
 }
 
-const Layout = ({ children, title, accessTagsList }: layoutProps) => {
+const Layout = ({
+  children,
+  title,
+  accessTagsList,
+  handleHambergarClick,
+}: layoutProps) => {
+  const { isShowBackBtn, isShowHanbergerBtn, isAsideOpen } = useApp();
+
   return (
     <>
       <Head>
@@ -23,9 +35,15 @@ const Layout = ({ children, title, accessTagsList }: layoutProps) => {
         <div className="wrapper">
           <Header accessTagsList={accessTagsList} />
           <div id="top"></div>
-          {/* <div className="my-0 mx-auto pb-16 w-screen h-fit overflow-y-scroll absolute top-16"> */}
-          {/* <aside></aside> */}
-          <main>{children}</main>
+          <main>
+            {isShowHanbergerBtn && (
+              // <button onClick={handleHambergarClick}></button>
+              <HamburgerBtn />
+            )}
+            {isShowBackBtn && <Back />}
+            {isAsideOpen && <SideMenu />}
+            {children}
+          </main>
           <GoToTop />
           <Footer />
           {/* </div> */}
