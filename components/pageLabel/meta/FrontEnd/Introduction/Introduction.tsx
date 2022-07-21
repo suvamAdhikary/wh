@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HeadingL1 from "../../../../headings/HeadingL1";
 import NavInMain from "../../../../layout/NavInMain";
 import UnOrderdList from "../../../../lists/UnOrderdList";
+import IntroHTMLAndCSS from "./IntroHTMLAndCSS/IntroHTMLAndCSS";
 import StartWithWebDev from "./StartWithWebDev/StartWithWebDev";
 
 const Introduction = () => {
@@ -46,7 +47,9 @@ const Introduction = () => {
       {activeTab === "GetStartedwithWebDevelopment" ? (
         <StartWithWebDev />
       ) : activeTab === "IntroductiontoHTMLandCSS" ? (
-        <></>
+        <>
+          <IntroHTMLAndCSS />
+        </>
       ) : activeTab === "UIFrameworks" ? (
         <></>
       ) : (
