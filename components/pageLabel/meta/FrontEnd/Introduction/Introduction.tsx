@@ -4,6 +4,7 @@ import NavInMain from "../../../../layout/NavInMain";
 import UnOrderdList from "../../../../lists/UnOrderdList";
 import IntroHTMLAndCSS from "./IntroHTMLAndCSS/IntroHTMLAndCSS";
 import StartWithWebDev from "./StartWithWebDev/StartWithWebDev";
+import UIFrameworks from "./UIFrameworks/UIFrameworks";
 
 const Introduction = () => {
   const [activeTab, setActiveTab] = useState<string>("");
@@ -51,7 +52,9 @@ const Introduction = () => {
           <IntroHTMLAndCSS />
         </>
       ) : activeTab === "UIFrameworks" ? (
-        <></>
+        <>
+          <UIFrameworks />
+        </>
       ) : (
         <>
           <HeadingL1 title="Introduction to Front-End Development" />
