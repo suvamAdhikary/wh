@@ -17,3 +17,8 @@
   list-style-type: disc;
   padding: 0.125rem 0;
 }
+
+.link-description {
+  padding: 1rem;
+  font-size: 0.815rem;
+}

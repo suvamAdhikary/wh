@@ -20,9 +20,11 @@
 @import "./components/heading.css";
 @import "./components/dynamicComponents.css";
 @import "./components/modal.css";
+@import "./components/gap.css";
 
 /* pages */
 @import "./pages/meta.css";
+@import "./pages/meta-ui-frameworks.css";
 
 /* utils */
 @import "./utils/variables.css";

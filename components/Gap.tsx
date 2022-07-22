@@ -3,7 +3,7 @@ import React from "react";
 const Gap = () => {
   return (
     <>
-      <br />
+      <br className="small-gap" />
     </>
   );
 };
