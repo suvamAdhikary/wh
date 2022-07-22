@@ -1,6 +1,9 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 import { navBtnWIthCtaProps } from "../interfaces/button";
-import { aFunctionWithAStringArg } from "../interfaces/functionType";
+import {
+  aFunctionWithAStringArg,
+  aFunctionWithoutArg,
+} from "../interfaces/functionType";
 
 type appContextType = {
   user: boolean;
@@ -9,6 +12,11 @@ type appContextType = {
   isShowBackBtn: boolean;
   showBackBtn: () => void;
   hideBackBtn: () => void;
+  isShowMagicBackBtn: boolean;
+  showMagicBackBtn: () => void;
+  hideMagicBackBtn: () => void;
+  magicBackCta: () => void;
+  handleMagicBackCta: (cta: aFunctionWithoutArg) => void;
   isShowHanbergerBtn: boolean;
   showHambergerBtn: () => void;
   hideHambergerBtn: () => void;
@@ -29,6 +37,11 @@ const appContextDefaultValues: appContextType = {
   isShowBackBtn: false,
   showBackBtn: () => {},
   hideBackBtn: () => {},
+  isShowMagicBackBtn: false,
+  showMagicBackBtn: () => {},
+  hideMagicBackBtn: () => {},
+  magicBackCta: () => {},
+  handleMagicBackCta: () => {},
   isShowHanbergerBtn: false,
   showHambergerBtn: () => {},
   hideHambergerBtn: () => {},
@@ -52,18 +65,24 @@ type appProviderProps = {
   children: ReactNode;
 };
 
-const dummyCta = (tabValue = "Dummy CTA") => {
+const dummyCta = (tabValue = "DummyCta CTA") => {
   console.log(tabValue);
 };
+
+const dCta = () => {};
 
 export const AppProvider = ({ children }: appProviderProps) => {
   const [user, setUser] = useState<boolean>(false);
   const [isShowBackBtn, setIsShowBackBtn] = useState<boolean>(false);
+  const [isShowMagicBackBtn, setIsShowMagicBackBtn] = useState<boolean>(false);
   const [isShowHanbergerBtn, setIsShowHanbergerBtn] = useState<boolean>(false);
   const [isAsideOpen, setIsAsideOpen] = useState<boolean>(false);
   const [asideMenuList, setAsideMenuList] = useState<navBtnWIthCtaProps[]>([]);
   const [asideMenuCta, setAsideMenuCta] = useState<aFunctionWithAStringArg>(
     () => dummyCta
+  );
+  const [magicBackCta, setMagicBackCta] = useState<aFunctionWithoutArg>(
+    () => dCta
   );
 
   const login = () => {
@@ -80,6 +99,18 @@ export const AppProvider = ({ children }: appProviderProps) => {
 
   const hideBackBtn = () => {
     setIsShowBackBtn(false);
+  };
+
+  const showMagicBackBtn = () => {
+    setIsShowMagicBackBtn(true);
+  };
+
+  const hideMagicBackBtn = () => {
+    setIsShowMagicBackBtn(false);
+  };
+
+  const handleMagicBackCta = (cta: aFunctionWithoutArg) => {
+    setMagicBackCta(() => cta);
   };
 
   const showHambergerBtn = () => {
@@ -117,6 +148,11 @@ export const AppProvider = ({ children }: appProviderProps) => {
     isShowBackBtn,
     showBackBtn,
     hideBackBtn,
+    isShowMagicBackBtn,
+    showMagicBackBtn,
+    hideMagicBackBtn,
+    magicBackCta,
+    handleMagicBackCta,
     isShowHanbergerBtn,
     showHambergerBtn,
     hideHambergerBtn,

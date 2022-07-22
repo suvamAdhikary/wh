@@ -1,8 +1,9 @@
 import React from "react";
-import Gap from "../../Gap";
-import HeadingL2 from "../../headings/HeadingL2";
-import QA from "../../QA";
-import UnOrderdList from "../../lists/UnOrderdList";
+import Gap from "../../../../Gap";
+import HeadingL2 from "../../../../headings/HeadingL2";
+import UnOrderdList from "../../../../lists/UnOrderdList";
+import QA from "../../../../QA";
+
 
 const EmergingTechnologiesAcceleratedByCloud = () => {
   const IoTAndCloud = {

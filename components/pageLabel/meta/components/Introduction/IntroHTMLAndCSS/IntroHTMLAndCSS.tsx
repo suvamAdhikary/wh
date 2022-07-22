@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useApp } from "../../../../../../context/AppContext";
 import { aFunctionWithAStringArg } from "../../../../../../interfaces/functionType";
+import { magicBackProps } from "../../../../../../interfaces/layout";
 import HeadingL2 from "../../../../../headings/HeadingL2";
-import CoreInternetTech from "./CoreInternetTech";
-import HowTheWebWorks from "./HowTheWebWorks";
+import CSS from "./CSS";
+import HTML from "./HTML";
 
-const StartWithWebDev = () => {
-  const [activeTab, setActiveTab] = useState<string>("HowTheWebWorks");
+const IntroHTMLAndCSS = ({ backToParent }: magicBackProps) => {
+  const [activeTab, setActiveTab] = useState<string>("GettingStartedwithHTML");
 
   const {
+    showMagicBackBtn,
+    hideMagicBackBtn,
+    handleMagicBackCta,
     showHambergerBtn,
     hideHambergerBtn,
     handleAsineMenuCta,
@@ -21,25 +25,25 @@ const StartWithWebDev = () => {
 
   const topics = [
     {
-      name: "Introduction",
-      value: "Introduction",
+      name: "Getting Started with HTML",
+      value: "GettingStartedwithHTML",
     },
     {
-      name: "How The Web Works",
-      value: "HowTheWebWorks",
-    },
-    {
-      name: "Core Internet Technologies",
-      value: "CoreInternetTechnologies",
+      name: "CSS Basics",
+      value: "CSSBasics",
     },
   ];
 
   useEffect(() => {
     showHambergerBtn();
+    showMagicBackBtn();
+    handleMagicBackCta(backToParent);
     handleAsineMenuCta(handleTabSelection);
     handleAsideMenuItems(topics);
 
     return () => {
+      hideMagicBackBtn();
+      handleMagicBackCta(() => {});
       hideHambergerBtn();
       handleAsineMenuCta(() => {});
       handleAsideMenuItems([]);
@@ -48,11 +52,11 @@ const StartWithWebDev = () => {
 
   return (
     <>
-      <HeadingL2 title="Get started with web development" />
-      {activeTab === "HowTheWebWorks" ? (
-        <HowTheWebWorks />
-      ) : activeTab === "CoreInternetTechnologies" ? (
-        <CoreInternetTech />
+      <HeadingL2 title="Introduction to HTML and CSS" />
+      {activeTab === "GettingStartedwithHTML" ? (
+        <HTML />
+      ) : activeTab === "CSSBasics" ? (
+        <CSS />
       ) : (
         <></>
       )}
@@ -60,4 +64,4 @@ const StartWithWebDev = () => {
   );
 };
 
-export default StartWithWebDev;
+export default IntroHTMLAndCSS;

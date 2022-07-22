@@ -1,6 +1,6 @@
 import React from "react";
-import HeadingL3 from "../../headings/HeadingL3";
-import UnOrderdList from "../../lists/UnOrderdList";
+import HeadingL3 from "../../../../headings/HeadingL3";
+import UnOrderdList from "../../../../lists/UnOrderdList";
 
 const KeyCloudServiceProvidersAndTheirServices = () => {
   const alibabaCloud = {

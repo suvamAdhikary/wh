@@ -1,10 +1,10 @@
 import React from "react";
-import Gap from "../../Gap";
-import HeadingL3 from "../../headings/HeadingL3";
-import HeadingL4 from "../../headings/HeadingL4";
-import OneLiner from "../../OneLiner";
-import QA from "../../QA";
-import UnOrderdList from "../../lists/UnOrderdList";
+import Gap from "../../../../Gap";
+import HeadingL3 from "../../../../headings/HeadingL3";
+import HeadingL4 from "../../../../headings/HeadingL4";
+import UnOrderdList from "../../../../lists/UnOrderdList";
+import OneLiner from "../../../../OneLiner";
+import QA from "../../../../QA";
 
 const DefinitionAndEssentialCharacteristicsOfCloudComputing = () => {
   const cloudComputing = {
