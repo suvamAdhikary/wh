@@ -1,7 +1,8 @@
 import React from "react";
-import Gap from "../../Gap";
-import HeadingL2 from "../../headings/HeadingL2";
-import UnOrderdList from "../../lists/UnOrderdList";
+import Gap from "../../../../Gap";
+import HeadingL2 from "../../../../headings/HeadingL2";
+import UnOrderdList from "../../../../lists/UnOrderdList";
+
 import DefinitionAndEssentialCharacteristicsOfCloudComputing from "./DefinitionAndEssentialCharacteristicsOfCloudComputing";
 import HistoryAndEvolutionOfCloudComputing from "./HistoryAndEvolutionOfCloudComputing";
 import KeyCloudServiceProvidersAndTheirServices from "./KeyCloudServiceProvidersAndTheirServices";

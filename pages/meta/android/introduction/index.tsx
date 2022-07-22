@@ -3,16 +3,16 @@ import React from "react";
 import Layout from "../../../../components/layout/Layout";
 import Introduction from "../../../../components/pageLabel/meta/components/Introduction/Introduction";
 
-const IntroductionToFrontEndDev: NextPage = () => {
+const IntroductionToMobileDev: NextPage = () => {
   return (
     <>
-      <Layout title="Meta - Introduction to Front End Development">
+      <Layout title="Meta - Introduction to Mobile Development">
         <>
-          <Introduction heading="Introduction to Front-End Development" />
+          <Introduction heading="Introduction to Android Development" />
         </>
       </Layout>
     </>
   );
 };
 
-export default IntroductionToFrontEndDev;
+export default IntroductionToMobileDev;

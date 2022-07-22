@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useApp } from "../../../../../context/AppContext";
 import HeadingL1 from "../../../../headings/HeadingL1";
 import NavInMain from "../../../../layout/NavInMain";
 import UnOrderdList from "../../../../lists/UnOrderdList";
@@ -6,12 +7,30 @@ import IntroHTMLAndCSS from "./IntroHTMLAndCSS/IntroHTMLAndCSS";
 import StartWithWebDev from "./StartWithWebDev/StartWithWebDev";
 import UIFrameworks from "./UIFrameworks/UIFrameworks";
 
-const Introduction = () => {
+export interface introductionProps {
+  heading: string;
+}
+
+const Introduction = ({ heading }: introductionProps) => {
   const [activeTab, setActiveTab] = useState<string>("");
+
+  const { showBackBtn, hideBackBtn } = useApp();
 
   const handleTabSelection = (tabValue: string) => {
     setActiveTab(tabValue);
   };
+
+  const hereAgain = () => {
+    setActiveTab("");
+  };
+
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn();
+    };
+  }, []);
 
   const topics = [
     {
@@ -46,18 +65,18 @@ const Introduction = () => {
   return (
     <>
       {activeTab === "GetStartedwithWebDevelopment" ? (
-        <StartWithWebDev />
+        <StartWithWebDev backToParent={hereAgain} />
       ) : activeTab === "IntroductiontoHTMLandCSS" ? (
         <>
-          <IntroHTMLAndCSS />
+          <IntroHTMLAndCSS backToParent={hereAgain} />
         </>
       ) : activeTab === "UIFrameworks" ? (
         <>
-          <UIFrameworks />
+          <UIFrameworks backToParent={hereAgain} />
         </>
       ) : (
         <>
-          <HeadingL1 title="Introduction to Front-End Development" />
+          <HeadingL1 title={heading} />
           <UnOrderdList
             heading={learningObjectives.title}
             listData={learningObjectives.list}

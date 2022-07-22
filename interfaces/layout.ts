@@ -37,3 +37,7 @@ export interface sideMenuProps {
   onClose: any;
   cta?: any;
 }
+
+export interface magicBackProps {
+  backToParent?: any;
+}

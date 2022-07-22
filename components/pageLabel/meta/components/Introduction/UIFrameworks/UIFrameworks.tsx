@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useApp } from "../../../../../../context/AppContext";
 import { aFunctionWithAStringArg } from "../../../../../../interfaces/functionType";
+import { magicBackProps } from "../../../../../../interfaces/layout";
 import HeadingL2 from "../../../../../headings/HeadingL2";
 import IntroReact from "./IntroReact";
 import IntroUIFrameworksLibraries from "./IntroUIFrameworksLibraries";
 
-const UIFrameworks = () => {
+const UIFrameworks = ({ backToParent }: magicBackProps) => {
   const [activeTab, setActiveTab] = useState<string>(
     "IntroUIFrameworksandLibraries"
   );
 
   const {
+    showMagicBackBtn,
+    hideMagicBackBtn,
+    handleMagicBackCta,
     showHambergerBtn,
     hideHambergerBtn,
     handleAsineMenuCta,
@@ -23,10 +27,6 @@ const UIFrameworks = () => {
 
   const topics = [
     {
-      name: "Introduction",
-      value: "Introduction",
-    },
-    {
       name: "Intro UI Frameworks and Libraries",
       value: "IntroUIFrameworksandLibraries",
     },
@@ -38,10 +38,14 @@ const UIFrameworks = () => {
 
   useEffect(() => {
     showHambergerBtn();
+    showMagicBackBtn();
+    handleMagicBackCta(backToParent);
     handleAsineMenuCta(handleTabSelection);
     handleAsideMenuItems(topics);
 
     return () => {
+      hideMagicBackBtn();
+      handleMagicBackCta(() => {});
       hideHambergerBtn();
       handleAsineMenuCta(() => {});
       handleAsideMenuItems([]);

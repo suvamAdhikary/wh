@@ -7,6 +7,7 @@ import Header from "./Header";
 import { useApp } from "../../context/AppContext";
 import HamburgerBtn from "../buttons/HamburgerBtn";
 import SideMenu from "./SideMenu";
+import MagicBack from "../buttons/MagicBack";
 
 export interface layoutProps {
   title: string;
@@ -18,13 +19,9 @@ export interface layoutProps {
   handleHambergarClick?: any;
 }
 
-const Layout = ({
-  children,
-  title,
-  accessTagsList,
-  handleHambergarClick,
-}: layoutProps) => {
-  const { isShowBackBtn, isShowHanbergerBtn, isAsideOpen } = useApp();
+const Layout = ({ children, title, accessTagsList }: layoutProps) => {
+  const { isShowBackBtn, isShowMagicBackBtn, isShowHanbergerBtn, isAsideOpen } =
+    useApp();
 
   return (
     <>
@@ -36,17 +33,14 @@ const Layout = ({
           <Header accessTagsList={accessTagsList} />
           <div id="top"></div>
           <main>
-            {isShowHanbergerBtn && (
-              // <button onClick={handleHambergarClick}></button>
-              <HamburgerBtn />
-            )}
+            {isShowHanbergerBtn && <HamburgerBtn />}
             {isShowBackBtn && <Back />}
+            {isShowMagicBackBtn && <MagicBack />}
             {isAsideOpen && <SideMenu />}
             {children}
           </main>
           <GoToTop />
           <Footer />
-          {/* </div> */}
         </div>
       </>
     </>
