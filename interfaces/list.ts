@@ -1,6 +1,7 @@
 export interface linkProps {
   title: string;
   link: string;
+  description?: string;
 }
 
 export interface listOfLinksProps {
