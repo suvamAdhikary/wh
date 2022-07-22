@@ -14,6 +14,11 @@ const ListOfLinks = ({ title, list, id }: listOfLinksProps) => {
               <Link href={el.link}>
                 <a target={"_blank"} rel="noopener noreferrer">
                   {el.title}
+                  {el.description && (
+                    <span className="link-description">
+                      <i>({el.description})</i>
+                    </span>
+                  )}
                 </a>
               </Link>
             </li>
