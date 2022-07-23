@@ -22,7 +22,6 @@ const Header = ({ accessTagsList }: headerProps) => {
         </Link>
         {accessTagsList?.length && (
           <div className="dynamic-nav-wrapper">
-            {/* <nav></nav> */}
             {accessTagsList?.length && <AccessTags list={accessTagsList} />}
           </div>
         )}
@@ -32,10 +31,7 @@ const Header = ({ accessTagsList }: headerProps) => {
               <Link href={"/meta"}>META</Link>
             </li>
             <li className="nav-buttons">
-              <Link href={"/cloud"}>CLOUD</Link>
-            </li>
-            <li className="nav-buttons">
-              <Link href={"/ai"}>AI</Link>
+              <Link href={"/ibm"}>IBM</Link>
             </li>
             <li className="nav-buttons">
               <Link href={"/python"}>PYTHON</Link>

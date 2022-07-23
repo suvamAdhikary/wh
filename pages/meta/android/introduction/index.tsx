@@ -1,14 +1,14 @@
 import { NextPage } from "next";
 import React from "react";
 import Layout from "../../../../components/layout/Layout";
-import Introduction from "../../../../components/pageLabel/meta/components/Introduction/Introduction";
+import IntroductionFullStack from "../../../../components/pages/meta/SubComponents/Introduction/IntroductionFullStack";
 
 const IntroductionToMobileDev: NextPage = () => {
   return (
     <>
       <Layout title="Meta - Introduction to Mobile Development">
         <>
-          <Introduction heading="Introduction to Android Development" />
+          <IntroductionFullStack heading="Introduction to Android Development" />
         </>
       </Layout>
     </>
