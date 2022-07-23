@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import React from "react";
 import Layout from "../../components/layout/Layout";
-import MetaHome from "../../components/pageLabel/meta/Home/MetaHome";
+import MetaHome from "../../components/pages/meta/Home/MetaHome";
 
 const Meta: NextPage = () => {
   return (
