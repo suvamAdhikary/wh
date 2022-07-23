@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { useApp } from "../../../../../context/AppContext";
-import { magicBackProps } from "../../../../../interfaces/layout";
+import { useApp } from "../../../../../../context/AppContext";
+import { magicBackProps } from "../../../../../../interfaces/layout";
 import BusinessCaseForCloudComputing from "./BusinessCaseForCloudComputing";
 import EmergingTechnologiesAcceleratedByCloud from "./EmergingTechnologiesAcceleratedByCloud";
 import IntroductionToCloudComputing from "./IntroductionToCloudComputing";

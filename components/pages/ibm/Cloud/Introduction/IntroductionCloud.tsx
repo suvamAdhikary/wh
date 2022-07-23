@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import HeadingL1 from "../../../headings/HeadingL1";
-import NavInMain from "../../../layout/NavInMain";
+import HeadingL1 from "../../../../headings/HeadingL1";
+import NavInMain from "../../../../layout/NavInMain";
 import CloudComputingModels from "./CloudComputingModels/CloudComputingModels";
 import CloudSecurityMonitoringCaseStudiesJobs from "./CloudSecurityMonitoringCaseStudiesJobs/CloudSecurityMonitoringCaseStudiesJobs";
 import ComponentsOfCloudComputing from "./ComponentsOfCloudComputing/ComponentsOfCloudComputing";
