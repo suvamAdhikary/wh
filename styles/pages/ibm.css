@@ -1,0 +1,28 @@
+.big-link-btn__container {
+  display: flex;
+  width: 65%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.big-link-btn {
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+@supports (--webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .big-link-btn:hover {
+    background-color: var(--clr-light-2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.big-link-btn__text {
+  display: block;
+  margin: 1rem auto;
+}

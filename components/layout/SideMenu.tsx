@@ -2,6 +2,8 @@ import React from "react";
 import reactDOM from "react-dom";
 import { useApp } from "../../context/AppContext";
 import NavBtnWIthCta from "../buttons/NavBtnWIthCta";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const SideMenu = () => {
   const { isAsideOpen, asideMenuList, closeAside, asideMenuCta } = useApp();
@@ -17,6 +19,9 @@ const SideMenu = () => {
   return reactDOM.createPortal(
     <>
       <div className="aside-overly" onClick={() => closeAside()} />
+      <button className="cross-on-modal" onClick={() => closeAside()}>
+        <FontAwesomeIcon icon={faXmark} size="2x" fixedWidth />
+      </button>
       <div className="aside-modal__main" onClick={() => closeAside()}>
         <>
           <aside>

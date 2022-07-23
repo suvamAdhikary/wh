@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import React from "react";
 import Layout from "../../../components/layout/Layout";
-import FrontEnd from "../../../components/pageLabel/meta/FrontEnd/FrontEnd";
+import FrontEnd from "../../../components/pages/meta/FrontEnd/FrontEnd";
 
 const MetaFrontEnd: NextPage = () => {
   return (

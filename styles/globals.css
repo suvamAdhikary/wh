@@ -25,6 +25,7 @@
 /* pages */
 @import "./pages/meta.css";
 @import "./pages/meta-ui-frameworks.css";
+@import "./pages/ibm.css";
 
 /* utils */
 @import "./utils/variables.css";
