@@ -7,6 +7,7 @@ export interface unOrderdListProps {
   listData: any[];
   id?: string;
   isMultiList?: boolean;
+  closerLine?: string;
 }
 
 const UnOrderdList = ({
@@ -15,6 +16,7 @@ const UnOrderdList = ({
   description,
   id,
   isMultiList,
+  closerLine,
 }: unOrderdListProps) => {
   return (
     <>
@@ -60,6 +62,11 @@ const UnOrderdList = ({
             </ul>
           </>
         )}
+        {closerLine?.split("\n").map((line) => (
+          <p className="list-description" key={line}>
+            {line}
+          </p>
+        ))}
       </article>
     </>
   );
