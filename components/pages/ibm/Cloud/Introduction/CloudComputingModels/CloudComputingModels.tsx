@@ -49,6 +49,7 @@ const CloudComputingModels = ({ backToParent }: magicBackProps) => {
       handleAsideMenuItems([]);
     };
   }, []);
+
   return (
     <>
       <HeadingL2 title="Cloud Computing Models" />
