@@ -3,9 +3,14 @@ import { useApp } from "../../../../../../context/AppContext";
 import { aFunctionWithAStringArg } from "../../../../../../interfaces/functionType";
 import { magicBackProps } from "../../../../../../interfaces/layout";
 import HeadingL2 from "../../../../../headings/HeadingL2";
+import IntroReact from "../UIFrameworks/IntroReact";
+import IntroCrossPlatformDev from "./IntroCrossPlatformDev";
+import IntroReactNative from "./IntroReactNative";
 
 const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
-  const [activeTab, setActiveTab] = useState<string>("GettingStartedwithHTML");
+  const [activeTab, setActiveTab] = useState<string>(
+    "IntroductiontoCross-platformDevelopment"
+  );
 
   const {
     showMagicBackBtn,
@@ -23,12 +28,16 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
 
   const topics = [
     {
-      name: "Getting Started with HTML",
-      value: "GettingStartedwithHTML",
+      name: "Introduction to Cross-platform Development",
+      value: "IntroductiontoCross-platformDevelopment",
     },
     {
-      name: "CSS Basics",
-      value: "CSSBasics",
+      name: "Introduction to React",
+      value: "IntroductiontoReact",
+    },
+    {
+      name: "Introduction to React Native",
+      value: "IntroductiontoReactNative",
     },
   ];
 
@@ -51,10 +60,18 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
   return (
     <>
       <HeadingL2 title="React and React Native" />
-      {activeTab === "GettingStartedwithHTML" ? (
-        <></>
-      ) : activeTab === "CSSBasics" ? (
-        <></>
+      {activeTab === "IntroductiontoCross-platformDevelopment" ? (
+        <>
+          <IntroCrossPlatformDev />
+        </>
+      ) : activeTab === "IntroductiontoReact" ? (
+        <>
+          <IntroReact />
+        </>
+      ) : activeTab === "IntroductiontoReactNative" ? (
+        <>
+          <IntroReactNative />
+        </>
       ) : (
         <></>
       )}
