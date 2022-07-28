@@ -3,13 +3,12 @@ import { useApp } from "../../../../../../context/AppContext";
 import { aFunctionWithAStringArg } from "../../../../../../interfaces/functionType";
 import { magicBackProps } from "../../../../../../interfaces/layout";
 import HeadingL2 from "../../../../../headings/HeadingL2";
-import IntroReact from "../UIFrameworks/IntroReact";
-import IntroCrossPlatformDev from "./IntroCrossPlatformDev";
-import IntroReactNative from "./IntroReactNative";
+import ArraysObjectsFunctions from "./ArraysObjectsFunctions";
+import ErrorHandling from "./ErrorHandling";
 
-const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
+const BuildingBlocksProgram = ({ backToParent }: magicBackProps) => {
   const [activeTab, setActiveTab] = useState<string>(
-    "IntroductiontoCross-platformDevelopment"
+    "Arrays,ObjectsandFunctions"
   );
 
   const {
@@ -28,16 +27,12 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
 
   const topics = [
     {
-      name: "Introduction to Cross-platform Development",
-      value: "IntroductiontoCross-platformDevelopment",
+      name: "Arrays, Objects and Functions",
+      value: "Arrays,ObjectsandFunctions",
     },
     {
-      name: "Introduction to React",
-      value: "IntroductiontoReact",
-    },
-    {
-      name: "Introduction to React Native",
-      value: "IntroductiontoReactNative",
+      name: "Error Handling",
+      value: "ErrorHandling",
     },
   ];
 
@@ -59,18 +54,14 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
 
   return (
     <>
-      <HeadingL2 title="React and React Native" />
-      {activeTab === "IntroductiontoCross-platformDevelopment" ? (
+      <HeadingL2 title="The Building Blocks of a Program" />
+      {activeTab === "Arrays,ObjectsandFunctions" ? (
         <>
-          <IntroCrossPlatformDev />
+          <ArraysObjectsFunctions />
         </>
-      ) : activeTab === "IntroductiontoReact" ? (
+      ) : activeTab === "ErrorHandling" ? (
         <>
-          <IntroReact />
-        </>
-      ) : activeTab === "IntroductiontoReactNative" ? (
-        <>
-          <IntroReactNative />
+          <ErrorHandling />
         </>
       ) : (
         <></>
@@ -79,4 +70,4 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
   );
 };
 
-export default ReactAndReactNative;
+export default BuildingBlocksProgram;

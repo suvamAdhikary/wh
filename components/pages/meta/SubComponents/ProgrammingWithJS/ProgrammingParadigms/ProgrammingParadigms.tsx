@@ -3,13 +3,14 @@ import { useApp } from "../../../../../../context/AppContext";
 import { aFunctionWithAStringArg } from "../../../../../../interfaces/functionType";
 import { magicBackProps } from "../../../../../../interfaces/layout";
 import HeadingL2 from "../../../../../headings/HeadingL2";
-import IntroReact from "../UIFrameworks/IntroReact";
-import IntroCrossPlatformDev from "./IntroCrossPlatformDev";
-import IntroReactNative from "./IntroReactNative";
+import AdvancedJavaScript from "./AdvancedJavaScript";
+import FunctionalProgramming from "./FunctionalProgramming";
+import JavaScriptInBrowser from "./JavaScriptInBrowser";
+import ObjectOrientedProgramming from "./ObjectOrientedProgramming";
 
-const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
+const ProgrammingParadigms = ({ backToParent }: magicBackProps) => {
   const [activeTab, setActiveTab] = useState<string>(
-    "IntroductiontoCross-platformDevelopment"
+    "IntroductiontoFunctionalProgramming"
   );
 
   const {
@@ -28,16 +29,20 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
 
   const topics = [
     {
-      name: "Introduction to Cross-platform Development",
-      value: "IntroductiontoCross-platformDevelopment",
+      name: "Introduction to Functional Programming",
+      value: "IntroductiontoFunctionalProgramming",
     },
     {
-      name: "Introduction to React",
-      value: "IntroductiontoReact",
+      name: "Introduction to Object-Oriented Programming",
+      value: "IntroductiontoObject-OrientedProgramming",
     },
     {
-      name: "Introduction to React Native",
-      value: "IntroductiontoReactNative",
+      name: "Advanced JavaScript Features",
+      value: "AdvancedJavaScriptFeatures",
+    },
+    {
+      name: "JavaScript in the Browser",
+      value: "JavaScriptintheBrowser",
     },
   ];
 
@@ -59,18 +64,22 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
 
   return (
     <>
-      <HeadingL2 title="React and React Native" />
-      {activeTab === "IntroductiontoCross-platformDevelopment" ? (
+      <HeadingL2 title="Programming Paradigms" />
+      {activeTab === "IntroductiontoFunctionalProgramming" ? (
         <>
-          <IntroCrossPlatformDev />
+          <FunctionalProgramming />
         </>
-      ) : activeTab === "IntroductiontoReact" ? (
+      ) : activeTab === "IntroductiontoObject-OrientedProgramming" ? (
         <>
-          <IntroReact />
+          <ObjectOrientedProgramming />
         </>
-      ) : activeTab === "IntroductiontoReactNative" ? (
+      ) : activeTab === "AdvancedJavaScriptFeatures" ? (
         <>
-          <IntroReactNative />
+          <AdvancedJavaScript />
+        </>
+      ) : activeTab === "JavaScriptintheBrowser" ? (
+        <>
+          <JavaScriptInBrowser />
         </>
       ) : (
         <></>
@@ -79,4 +88,4 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
   );
 };
 
-export default ReactAndReactNative;
+export default ProgrammingParadigms;

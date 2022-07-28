@@ -3,14 +3,12 @@ import { useApp } from "../../../../../../context/AppContext";
 import { aFunctionWithAStringArg } from "../../../../../../interfaces/functionType";
 import { magicBackProps } from "../../../../../../interfaces/layout";
 import HeadingL2 from "../../../../../headings/HeadingL2";
-import IntroReact from "../UIFrameworks/IntroReact";
-import IntroCrossPlatformDev from "./IntroCrossPlatformDev";
-import IntroReactNative from "./IntroReactNative";
+import ConditionalAndLoops from "./ConditionalAndLoops";
+import SettingUp from "./SettingUp";
+import WelcomeToProgramming from "./WelcomeToProgramming";
 
-const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
-  const [activeTab, setActiveTab] = useState<string>(
-    "IntroductiontoCross-platformDevelopment"
-  );
+const IntroJS = ({ backToParent }: magicBackProps) => {
+  const [activeTab, setActiveTab] = useState<string>("SettingUp");
 
   const {
     showMagicBackBtn,
@@ -28,16 +26,16 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
 
   const topics = [
     {
-      name: "Introduction to Cross-platform Development",
-      value: "IntroductiontoCross-platformDevelopment",
+      name: "Setting Up",
+      value: "SettingUp",
     },
     {
-      name: "Introduction to React",
-      value: "IntroductiontoReact",
+      name: "Welcome to Programming",
+      value: "WelcometoProgramming",
     },
     {
-      name: "Introduction to React Native",
-      value: "IntroductiontoReactNative",
+      name: "Conditional and Loops",
+      value: "ConditionalandLoops",
     },
   ];
 
@@ -59,18 +57,18 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
 
   return (
     <>
-      <HeadingL2 title="React and React Native" />
-      {activeTab === "IntroductiontoCross-platformDevelopment" ? (
+      <HeadingL2 title="Introduction to Javascript" />
+      {activeTab === "SettingUp" ? (
         <>
-          <IntroCrossPlatformDev />
+          <SettingUp />
         </>
-      ) : activeTab === "IntroductiontoReact" ? (
+      ) : activeTab === "WelcometoProgramming" ? (
         <>
-          <IntroReact />
+          <WelcomeToProgramming />
         </>
-      ) : activeTab === "IntroductiontoReactNative" ? (
+      ) : activeTab === "ConditionalandLoops" ? (
         <>
-          <IntroReactNative />
+          <ConditionalAndLoops />
         </>
       ) : (
         <></>
@@ -79,4 +77,4 @@ const ReactAndReactNative = ({ backToParent }: magicBackProps) => {
   );
 };
 
-export default ReactAndReactNative;
+export default IntroJS;

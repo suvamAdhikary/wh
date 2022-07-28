@@ -34,7 +34,9 @@ const Header = ({ accessTagsList }: headerProps) => {
               <Link href={"/ibm"}>IBM</Link>
             </li>
             <li className="nav-buttons">
-              <Link href={"/python"}>PYTHON</Link>
+              <Link href={"/university-of-michigan"}>
+                University of Michigan
+              </Link>
             </li>
           </ul>
         </nav>
