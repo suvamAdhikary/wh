@@ -10,7 +10,7 @@ const Android = () => {
     },
     {
       name: "Programming with JavaScript",
-      link: "#",
+      link: "/meta/android/javaScript",
     },
     {
       name: "Version Control",
