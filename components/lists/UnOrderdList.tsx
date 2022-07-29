@@ -1,5 +1,5 @@
 import React from "react";
-import Heading6 from "../headings/Heading6";
+import Heading6 from "../text/headings/Heading6";
 
 export interface unOrderdListProps {
   heading: string;

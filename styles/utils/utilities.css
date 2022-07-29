@@ -31,3 +31,9 @@ note: |
 .not-rounded {
   border-radius: 0;
 }
+
+mark {
+  padding: 0 0.125rem;
+  background-color: var(--clr-light-2);
+  font-weight: bold;
+}

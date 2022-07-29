@@ -1,6 +1,6 @@
 import React from "react";
 import Gap from "../../../../../Gap";
-import HeadingL2 from "../../../../../headings/HeadingL2";
+import HeadingL2 from "../../../../../text/headings/HeadingL2";
 import UnOrderdList from "../../../../../lists/UnOrderdList";
 
 import DefinitionAndEssentialCharacteristicsOfCloudComputing from "./DefinitionAndEssentialCharacteristicsOfCloudComputing";

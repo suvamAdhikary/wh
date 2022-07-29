@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeadingL1 from "../../../../headings/HeadingL1";
+import HeadingL1 from "../../../../text/headings/HeadingL1";
 import NavInMain from "../../../../layout/NavInMain";
 import CloudComputingModels from "./CloudComputingModels/CloudComputingModels";
 import CloudSecurityMonitoringCaseStudiesJobs from "./CloudSecurityMonitoringCaseStudiesJobs/CloudSecurityMonitoringCaseStudiesJobs";

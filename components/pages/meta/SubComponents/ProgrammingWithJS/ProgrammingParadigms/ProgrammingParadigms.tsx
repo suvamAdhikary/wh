@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useApp } from "../../../../../../context/AppContext";
 import { aFunctionWithAStringArg } from "../../../../../../interfaces/functionType";
 import { magicBackProps } from "../../../../../../interfaces/layout";
-import HeadingL2 from "../../../../../headings/HeadingL2";
+import HeadingL2 from "../../../../../text/headings/HeadingL2";
 import AdvancedJavaScript from "./AdvancedJavaScript";
 import FunctionalProgramming from "./FunctionalProgramming";
 import JavaScriptInBrowser from "./JavaScriptInBrowser";

@@ -1,0 +1,13 @@
+.code-parent {
+  width: 95%;
+  text-indent: 1rem;
+  margin: 0.5rem auto 0;
+  border: 1px solid var(--bg-dark);
+}
+
+.code__bottom{
+    height: 1rem;
+    width: 100%;
+    background-color: var(--clr-light-2);
+    margin-top: 1rem;
+}
