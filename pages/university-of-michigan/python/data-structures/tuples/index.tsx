@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import React, { useEffect } from "react";
-import Heading5 from "../../../../../components/headings/Heading5";
+import Heading5 from "../../../../../components/text/headings/Heading5";
 import Layout from "../../../../../components/layout/Layout";
 import OneLiner from "../../../../../components/OneLiner";
 import QA from "../../../../../components/QA";

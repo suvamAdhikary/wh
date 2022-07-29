@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useApp } from "../../../../../../context/AppContext";
 import { magicBackProps } from "../../../../../../interfaces/layout";
-import HeadingL2 from "../../../../../headings/HeadingL2";
+import HeadingL2 from "../../../../../text/headings/HeadingL2";
 
 const ProgramsthatSurftheWeb = ({ backToParent }: magicBackProps) => {
   const { showMagicBackBtn, hideMagicBackBtn, handleMagicBackCta } = useApp();

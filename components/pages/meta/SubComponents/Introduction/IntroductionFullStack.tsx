@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useApp } from "../../../../../context/AppContext";
-import HeadingL1 from "../../../../headings/HeadingL1";
+import HeadingL1 from "../../../../text/headings/HeadingL1";
 import NavInMain from "../../../../layout/NavInMain";
 import UnOrderdList from "../../../../lists/UnOrderdList";
 import IntroHTMLAndCSS from "./IntroHTMLAndCSS/IntroHTMLAndCSS";

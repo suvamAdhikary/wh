@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { listOfLinksProps } from "../../interfaces/list";
-import Heading5 from "../headings/Heading5";
+import Heading5 from "../text/headings/Heading5";
 
 const ListOfLinks = ({ title, list, id }: listOfLinksProps) => {
   return (
