@@ -1,15 +1,15 @@
 import React from "react";
 import { onlyChildProp } from "../../../interfaces/layout";
 
-const Code = ({ children }: onlyChildProp) => {
+const CodeOP = ({ children }: onlyChildProp) => {
   return (
     <>
       <pre className="code-parent">
-        <samp>{children}</samp>
+        <code>{children}</code>
         <div className="code__bottom"></div>
       </pre>
     </>
   );
 };
 
-export default Code;
+export default CodeOP;
