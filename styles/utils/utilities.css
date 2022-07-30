@@ -31,3 +31,28 @@ note: |
 .not-rounded {
   border-radius: 0;
 }
+
+mark {
+  padding: 0 0.125rem;
+  background-color: var(--clr-light-2);
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid var(--clr-light-5);
+  box-shadow: 0 1px 1px var(--bg-dark), 0 2px 0 0 var(--clr-light-2) inset;
+  color: var(--text-dark);
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.125rem 0.5rem;
+  white-space: nowrap;
+}
+
+.emphasis {
+  font-weight: 500;
+}

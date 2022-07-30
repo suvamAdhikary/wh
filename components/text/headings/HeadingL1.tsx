@@ -1,5 +1,5 @@
 import React from "react";
-import { headingProps } from "../../interfaces/heading";
+import { headingProps } from "../../../interfaces/heading";
 
 const HeadingL1 = ({ title }: headingProps) => {
   return (

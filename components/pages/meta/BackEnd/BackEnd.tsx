@@ -1,5 +1,5 @@
 import React from "react";
-import HeadingL1 from "../../../headings/HeadingL1";
+import HeadingL1 from "../../../text/headings/HeadingL1";
 import NavOnMain from "../../../layout/NavOnMain";
 
 const BackEnd = () => {

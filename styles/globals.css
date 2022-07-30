@@ -21,6 +21,8 @@
 @import "./components/dynamicComponents.css";
 @import "./components/modal.css";
 @import "./components/gap.css";
+@import "./components/code.css";
+@import "./components/images.css";
 
 /* pages */
 @import "./pages/meta.css";

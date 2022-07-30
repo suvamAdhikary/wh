@@ -41,3 +41,12 @@ export interface sideMenuProps {
 export interface magicBackProps {
   backToParent?: any;
 }
+
+export interface onlyChildProp {
+  children: ReactElement | string | number;
+}
+
+export interface ImageProps {
+  src: string;
+  alt?: string;
+}
