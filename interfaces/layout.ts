@@ -45,3 +45,8 @@ export interface magicBackProps {
 export interface onlyChildProp {
   children: ReactElement | string | number;
 }
+
+export interface ImageProps {
+  src: string;
+  alt?: string;
+}

@@ -1,12 +1,14 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Heading6 from "../text/headings/Heading6";
 
 export interface unOrderdListProps {
-  heading: string;
+  heading?: string;
   description?: string;
-  listData: any[];
+  listData?: any[];
   id?: string;
   isMultiList?: boolean;
+  isChildren?: boolean;
+  children?: ReactElement | string | number;
   closerLine?: string;
 }
 
@@ -17,6 +19,8 @@ const UnOrderdList = ({
   id,
   isMultiList,
   closerLine,
+  isChildren,
+  children,
 }: unOrderdListProps) => {
   return (
     <>
@@ -27,7 +31,11 @@ const UnOrderdList = ({
             {line}
           </p>
         ))}
-        {isMultiList ? (
+        {isChildren ? (
+          <>
+            <ul className="common-unorderd-list">{children}</ul>
+          </>
+        ) : isMultiList ? (
           <>
             {listData?.map(({ heading, list }) => (
               <section key={`${heading}`}>

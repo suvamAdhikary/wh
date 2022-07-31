@@ -1,14 +1,7 @@
 import React from "react";
+import { twoColTableProps } from "./TwoColTable";
 
-export interface twoColTableProps {
-  heading: string;
-  description?: string;
-  cols: string[];
-  tableData: any[];
-  id?: string;
-}
-
-const TwoColTable = ({
+const DynamicTable = ({
   heading,
   description,
   cols,
@@ -19,12 +12,16 @@ const TwoColTable = ({
     <>
       <article id={id} className="two-col-table-wrapper">
         {heading && <h5>{heading} :-</h5>}
-        <p>{description}</p>
+        {description?.split("\n").map((line) => (
+          <p className="list-description" key={line}>
+            {line}
+          </p>
+        ))}
         <table className="two-col-table">
           <thead className="two-col-table__head">
             <tr>
               {cols.map((cell) => (
-                <th className="two-col-table__head--headings" key={cell}>
+                <th className="dynamic-table__head--headings" key={cell}>
                   {cell}
                 </th>
               ))}
@@ -34,7 +31,7 @@ const TwoColTable = ({
             {tableData.map((row) => (
               <tr key={`${row[cols[0]]}-${row[cols[1]]}`}>
                 {cols.map((cell) => (
-                  <td className="two-col-table__cells" key={row[cell]}>
+                  <td className="dynamic-table__cells" key={row[cell]}>
                     {row[cell]}
                   </td>
                 ))}
@@ -47,4 +44,4 @@ const TwoColTable = ({
   );
 };
 
-export default TwoColTable;
+export default DynamicTable;
