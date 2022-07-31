@@ -1,10 +1,10 @@
 import React from "react";
 import { headingProps } from "../../../interfaces/heading";
 
-const HeadingL4 = ({ title }: headingProps) => {
+const HeadingL4 = ({ title, children, isChildren }: headingProps) => {
   return (
     <>
-      <h4> {title} </h4>
+      <h4> {isChildren ? children : title} </h4>
     </>
   );
 };
