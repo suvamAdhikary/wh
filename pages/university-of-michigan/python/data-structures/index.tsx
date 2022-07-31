@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import React, { useEffect } from "react";
 import Layout from "../../../../components/layout/Layout";
+import PythonDataStructures from "../../../../components/pages/Michigan/Python/PythonDataStructures/PythonDataStructures";
 import { useApp } from "../../../../context/AppContext";
 
 const DataStructure: NextPage = () => {
@@ -12,13 +13,13 @@ const DataStructure: NextPage = () => {
     return () => {
       hideBackBtn;
     };
-  }, []);
+  }, [showBackBtn, hideBackBtn]);
 
   return (
     <>
       <Layout title="Python - Data Structures">
         <>
-          <div>DataStructure</div>
+          <PythonDataStructures />
         </>
       </Layout>
     </>
