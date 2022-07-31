@@ -28,7 +28,7 @@ const PythonToAccessWebData = () => {
     return () => {
       hideBackBtn();
     };
-  }, []);
+  }, [showBackBtn, hideBackBtn]);
 
   const topics = [
     {

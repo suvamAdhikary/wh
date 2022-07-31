@@ -27,3 +27,16 @@
   padding: 0.25rem 0.5rem;
   /* text-align: center; */
 }
+
+.dynamic-table__head--headings {
+  border: 1px solid var(--clr-light-2);
+  border-collapse: collapse;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+}
+
+.dynamic-table__cells {
+  border: 1px solid var(--clr-light-2);
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+}

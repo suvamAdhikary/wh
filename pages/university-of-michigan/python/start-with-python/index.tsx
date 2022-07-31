@@ -1,11 +1,15 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../../../components/layout/Layout";
 import UnOrderdList from "../../../../components/lists/UnOrderdList";
 import OneLiner from "../../../../components/OneLiner";
+import StartedPython from "../../../../components/pages/Michigan/Python/StartedPython/StartedPython";
 import QA from "../../../../components/QA";
+import { useApp } from "../../../../context/AppContext";
 
 const StartPython: NextPage = () => {
+  const { showBackBtn, hideBackBtn } = useApp();
+
   const programStepsOrProgramFlow: string[] = [
     "Like a racipe or installation instructions, a program is a sequence of steps to be done in order.",
     "Some steps are conditional - they may be skipped.",
@@ -13,10 +17,19 @@ const StartPython: NextPage = () => {
     "Sometimes we store a set of steps to be used over and over as needed several places throughout the program.",
   ];
 
+  useEffect(() => {
+    showBackBtn();
+
+    return () => {
+      hideBackBtn;
+    };
+  }, [showBackBtn, hideBackBtn]);
+
   return (
     <>
       <Layout title="Programming for Everybody (Getting Started with Python)">
         <>
+          <StartedPython />
           <QA
             question="Reserverved Words"
             answer="False, None, True, and, as, assert, break, class, if, def, del, elif, else, except, return, for, from, global, try, import, in, is, lambda, while, not, or, pass, raise, finally, continue, nonlocal, with, yield"
